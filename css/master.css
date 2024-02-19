@@ -65,7 +65,7 @@ i{
     height: 34px;
     width: 34px;
 }
-a:is(:hover){
+a:is(:hover) i {
     transform: translate(-10px);
     background-color:rgb(240, 0, 152);
 }
