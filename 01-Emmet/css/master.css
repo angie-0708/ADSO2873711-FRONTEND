@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 body{ 
-    background-color: rgb(140, 248, 78);
+    background-color: hotpink;
     background-image:url(http://tinyurl.com/mttmzucr);
     background-attachment: fixed;
     background-size: cover;
@@ -28,11 +28,10 @@ nav.controls{
         transform: scale(1);
     }
     svg {
+        transform: rotate(180deg);
         width: 40px;
     }
 }
-
-
 main {
     align-items: center;
     display: flex;
@@ -40,64 +39,6 @@ main {
     justify-content: center;
     gap: 2rem;
     min-height: 100vh;
-}
-     
-header {
-    h1, h2 {
-        color:black;
-        text-align: center;
-        margin: 0;
-    }
-    h1{
-        font-size: 4rem;
-        font-weight: 300;
-    }
-    h2{
-        font-size: 1,4rem;
-        font-weight: 300;
-    }
-}
-
- menu{
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    gap: 1rem;
-
-    a:is(:link, :visited) {
-        background-color: mediumpurple;
-        border-radius: 50px;
-        display: flex;
-        color: darkmagenta;
-        gap: 1rem;
-        align-items: center;
-        padding: 1rem;
-        text-decoration: none;
-        transition: all 0.5s ease-in;
-        width: 280px;
-    }
-
-    
-    i{
-        background-color:darkmagenta;
-        border-radius: 20px;
-        color: violet;
-        font-style: normal;
-        display: flex;
-        align-items: center;
-        transition: all 0.5s ease-in;
-        justify-content: center;
-        height: 34px;
-        width: 34px;
-    }
-    a:is(:hover) {
-        transform: translate(-10px);
-        background-color:rgb(240, 0, 152);
-    }
-    a:is(:hover) i {
-        transform: scale(1.4) rotatex(360deg)
-    
-    }
 
     section{
         border-radius: 10px;
@@ -124,8 +65,60 @@ header {
     
         }
     }
+}
+     
+header {
+    h1, h2 {
+        color:black;
+        text-align: center;
+        margin: 0;
+    }
+    h1{
+        font-size: 4rem;
+        font-weight: 300;
+    }
+    h2{
+        font-size: 1,4rem;
+        font-weight: 300;
+    }
+}
+
+ menu{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 1rem;
+
+    a:is(:link, :visited){
+        background-color: rgb(24, 236, 236);
+        border-radius: 50px;
+        display: flex;
+        color: rgb(139, 0, 76);
+        gap: 1rem;
+        align-items: center;
+        padding: 1rem;
+        text-decoration: none;
+        transition: all 0.5s ease-in;
+        width: 280px;
+    }
  }
 
-
-
-
+i{
+    background-color:rgb(139, 0, 120);
+    border-radius: 20px;
+    color: rgb(198, 130, 238);
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    transition: all 0.5s ease-in;
+    justify-content: center;
+    height: 34px;
+    width: 34px;
+}
+a:is(:hover) i {
+    transform: translate(-10px);
+    background-color:rgb(240, 0, 32);
+}
+a:is(:hover) i {
+    transform: scale(1.4) 
+}
