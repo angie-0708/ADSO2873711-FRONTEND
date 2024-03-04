@@ -8,30 +8,6 @@ body{
 
 }
 
-nav.controls{
-    a:is(:link, :visited) {
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: dodgerblue;
-    height: 40px;
-    transform:scale(0.8);
-    opacity: 0.6;
-    padding: 10px;
-    width: 40px;
-    transition: all 0.4s ease-in;
-     
-    }
-    a:is(:hover) {
-        opacity: 1;
-        transform: scale(1);
-    }
-    svg {
-        width: 40px;
-    }
-}
-
 
 main {
     align-items: center;
@@ -97,32 +73,6 @@ header {
     a:is(:hover) i {
         transform: scale(1.4) rotatex(360deg)
     
-    }
-
-    section{
-        border-radius: 10px;
-        background-color: rgb(15, 126, 223);
-        color: black;
-        padding: 10px;
-        width: 400px;
-        h3 {
-            color: black;
-            font-size: 1.6rem;
-            margin: 0;
-            width: fit-content;
-    
-        }
-        p{
-            font-size: 1.8rem;
-            margin: 10px 0;
-        }
-        xmp {
-            border-radius: 10px;
-            background-color: black;
-            color: antiquewhite;
-            padding: 0 10px 10px 10px;
-    
-        }
     }
  }
 
