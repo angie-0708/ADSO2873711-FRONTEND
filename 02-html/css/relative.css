@@ -23,8 +23,8 @@ main {
         justify-content: space-between;
         width: 100%;
 
-    a:is(link, :visited) {
-        background-color: #ccc;
+    a:is(:link, :visited) {
+        background-color: #838282;
         color: #333;
         font-size: 1.4rem;
         padding: 10px;

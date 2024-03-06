@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <style>
+        table {
+            border-collapse:collapse;
+            color: #fff9;
+            font-size: 0.8rem;
+            tr {
+                th {
+                    background-color: #fff9;
+                    color: #000900;
+                    padding: 0.6rem;
+                }
+                td {
+                    background-color: #0009; 
+                    padding: 0,4rem 0.2rem;
+                }
+            }
+            tr:nth-child(even) td {
+                background-color: #0006;
+            }
+            tfoot {
+
+                td {
+                    background-color: #fff9;
+                    color:#0009;
+                    text-align: center;
+
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="controls">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+        </a>
+    </nav>
+    <main>
+        <header>
+            <h1>Tables</h1>
+            <h2>
+                esta etiqueta permite insertar tablas. 
+            </h2>
+        </header>
+        <section>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>fullname</th>
+                        <th>phone number</th>
+                        <th> email</th>
+                    </tr>
+                </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>homer simpson</td>
+                            <td>3100000001</td><td>homer@mail.com</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>marge simpson</td>
+                            <td>3100000002</td>
+                            <td>marge@mail.com</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>barth simpson</td>
+                            <td>3100000003</td>
+                            <td>barth@mail.com</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>maggie simpson</td>
+                            <td>3100000004</td>
+                            <td>maggie@mail.com</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>liza simpson</td>
+                            <td>3100000005</td>
+                            <td>liza@mail.com</td>
+                        </tr>
+                    </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

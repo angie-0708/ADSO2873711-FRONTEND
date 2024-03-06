@@ -44,7 +44,7 @@ header {
         background-color: mediumpurple;
         border-radius: 50px;
         display: flex;
-        color: darkmagenta;
+        color: indigo;
         gap: 1rem;
         align-items: center;
         padding: 1rem;
@@ -55,9 +55,9 @@ header {
 
     
     i{
-        background-color:darkmagenta;
+        background-color:rgb(139, 0, 76);
         border-radius: 20px;
-        color: violet;
+        color: rgb(209, 95, 209);
         font-style: normal;
         display: flex;
         align-items: center;
