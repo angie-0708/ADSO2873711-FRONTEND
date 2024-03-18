@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 body{ 
     background-color: hotpink;
-    background-image:url(https://cdn.goconqr.com/uploads/media/image/14841126/desktop_c9c0c539-68e8-4059-b9f1-6635c311028c.jpg);
+    background-image:url(https://www.downloadsource.net/image/uploaded/Windows_11_Wallpapers/img0.jpg?s=1b5397cc7962597f0cce3e15283b667d);
     background-attachment: fixed;
     background-size: cover;
      font-family:poppins,sans-serif
@@ -47,6 +47,7 @@ main {
         color: #000600;;
         padding: 10px;
         width: 400px;
+       
         h3 {
             border-bottom: 2px dotted #000400;
             color: #000600;
@@ -92,7 +93,7 @@ header {
     gap: 1rem;
 
     a:is(:link, :visited){
-        background-color: rgb(26, 236, 236);
+        background-color:cornflowerblue;
         border-radius: 50px;
         display: flex;
         color: black;
@@ -103,9 +104,9 @@ header {
         transition: all 0.5s ease-in;
         width: 280px;
         i{
-            background-color:rgb(212, 38, 189);
+            background-color:blue;
             border-radius: 20px;
-            color: rgb(198, 130, 238);
+            color:ghostwhite;
             font-style: normal;
             display: flex;
             align-items: center;
