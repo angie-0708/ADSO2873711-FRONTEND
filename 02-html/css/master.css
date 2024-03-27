@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 body{ 
     background-color: hotpink;
-    background-image:url(https://www.downloadsource.net/image/uploaded/Windows_11_Wallpapers/img0.jpg?s=1b5397cc7962597f0cce3e15283b667d);
+    background-image:url(https://img.freepik.com/vector-gratis/fondo-naranja-abstracto-lineas-efecto-semitono_1017-32107.jpg?size=626&ext=jpg&ga=GA1.1.1269040533.1711497600&semt=ais);
     background-attachment: fixed;
     background-size: cover;
      font-family:poppins,sans-serif
@@ -29,7 +29,7 @@ nav.controls{
         transform: scale(1);
     }
     svg {
-        transform: rotate(180deg);
+       /* transform: rotate(180deg); */
         width: 40px;
     }
 }
@@ -94,7 +94,7 @@ header {
     gap: 1rem;
 
     a:is(:link, :visited){
-        background-color:cornflowerblue;
+        background-color:#ffA834;
         border-radius: 50px;
         display: flex;
         color: black;
@@ -105,7 +105,7 @@ header {
         transition: all 0.5s ease-in;
         width: 280px;
         i{
-            background-color:blue;
+            background-color:tomato;
             border-radius: 20px;
             color:ghostwhite;
             font-style: normal;
