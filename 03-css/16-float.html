@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Absolute Absolute-Units<style></style></title>
+    <title>float<style></style></title>
     <link rel="stylesheet" href="css/master.css">
     <style>
-        li.abs1 {font-size: 1in;}       
-        li.abs2 {font-size: 1cm;}
-        li.abs3 {font-size: 10mm;}
-        li.abs4 {font-size: 10pt;}
-        li.abs5 {font-size: 2pc;}
+        article p {
+            font-size: 0.7rem;
+        }
+        section article img {
+            float: left;
+        }
+        section article p + p {
+            clear: left;
+        }
     </style>
    
 </head>
@@ -23,18 +27,18 @@
     </nav>
     <main>
         <header>
-            <h1>Absolute-Units</h1>
-            <h2> especifica un valor fijo</h2>
+            <h1>float</h1>
+            <h2>plone a flotar el elemento al lado izqierdo o derecho.</h2>
         </header>
         <section>
-        <ul>
-            <li class="abs1">inch:0.5in</li>
-            <li class="abs2">cm:1cm</li>
-            <li class="abs3">Mm:10mm</li>
-            <li class="abs4">pt:10pt</li>
-            <li class="abs5">pc:10pc</li>
-        </ul>
-    </section>
+            <article>
+                <h4>Boo</h4>
+                <img src="images/BOO.jpg" width="140px">
+                <P>
+                    Boo
+                </P>
+            </article>
+        </section>
     </main>
-    </body>
+</body>
 </html>

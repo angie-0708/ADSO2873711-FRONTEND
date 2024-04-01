@@ -3,14 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Absolute Absolute-Units<style></style></title>
+    <title>Template<style></style></title>
     <link rel="stylesheet" href="css/master.css">
     <style>
-        li.abs1 {font-size: 1in;}       
-        li.abs2 {font-size: 1cm;}
-        li.abs3 {font-size: 10mm;}
-        li.abs4 {font-size: 10pt;}
-        li.abs5 {font-size: 2pc;}
+        
     </style>
    
 </head>
@@ -23,18 +19,12 @@
     </nav>
     <main>
         <header>
-            <h1>Absolute-Units</h1>
-            <h2> especifica un valor fijo</h2>
+            <h1>Template</h1>
+            <h2>  las propiedades se heredan desde el padre a toda su descencia</h2>
         </header>
         <section>
-        <ul>
-            <li class="abs1">inch:0.5in</li>
-            <li class="abs2">cm:1cm</li>
-            <li class="abs3">Mm:10mm</li>
-            <li class="abs4">pt:10pt</li>
-            <li class="abs5">pc:10pc</li>
-        </ul>
-    </section>
+            
+        </section>
     </main>
-    </body>
+</body>
 </html>

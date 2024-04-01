@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position<style></style></title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        div.parent {
+            border: 2px solid #0009;
+            margin: 20px auto;
+            padding: 32px;
+            width: 200px;
+        }
+        div.child {
+            background-color: #0006;
+            color: #fff9;
+            padding: 10px;
+            text-align: center;
+            width: 50px;
+        }
+        div.relative {
+            position:relative;
+        }
+        div.absolute {
+            position: absolute;
+            }
+            div.fixed {
+          position: fixed;
+            }
+            div.sticky {
+            position: sticky;
+        }
+
+        div.child.relative {
+            position:relative;
+            top: -20px;
+            left: 150px;
+        }
+        div.child.absolute {
+            position: absolute;
+            top: 40px;
+            left: 20px;
+        }
+        div.child.fixed {
+            top: 796px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        div.child.sticky {
+            top:20px ;
+        }
+    </style>
+   
+</head>
+<body>
+
+    <nav class="controls">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+        </a>
+    </nav>
+    <main>
+        <header>
+            <h1>position</h1>
+            <ul>
+                <li>Normal/Estatico</li>
+                <li>Relativo</li>
+                <li>Absoluto</li>
+                <li>Fixed</li>
+                <li>Sticky</li>
+            </ul>
+        </header>
+        <section>
+            <h3>Relative:</h3>
+            <div class="parent">
+                <div class="child relative">BOX</div>
+            </div>
+            <h3>Absolute:</h3>
+            <div class="parent relative">
+                <div class="child absolute">BOX</div>
+            </div>
+            <h3>Fixed:</h3>
+            <div class="parent">
+                <div class="child fixed">BOX</div>
+            </div>
+            <h3>Sticky:</h3>
+            <div class="parent">
+                <div class="child sticky">BOX</div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident autem quasi mollitia illum eligendi fugiat possimus, quae voluptates obcaecati iure accusamus. Recusandae, non at similique ipsam rerum perspiciatis fugit ipsum minima exercitationem, animi neque molestiae repudiandae, debitis voluptate consectetur! Dolore, ipsum corrupti! Aut placeat, repudiandae earum molestiae nisi at ipsa!</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+
