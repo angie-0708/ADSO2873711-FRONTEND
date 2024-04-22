@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lists<style></style></title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        ul {
+            list-style-type:square;
+        }
+        ul ul {
+            list-style-type:circle;
+        }
+        ol {
+            list-style-type:upper-roman;
+        }
+        ol ol {
+            list-style-type:lower-greek;
+        }
+        ul.images {
+            list-style-image: url(images/a6c8a2577315a6008a768c00db3b570d\ \(1\)\ \(2\).jpg);
+        }
+        
+    </style>
+   
+</head>
+<body>
+
+    <nav class="controls">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+        </a>
+    </nav>
+    <main>
+        <header>
+            <h1>lists</h1>
+            <h2>permite configurar todas las propiedades de las listas</h2>
+        </header>
+        <section>
+            <h3>unordered list</h3>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>javaScript
+                    <ul>
+                        <li>react JS</li>
+                        <li>vue JS</li>
+                        <li>angular JS</li>
+                    </ul>
+                </li>
+            </ul>
+            <h3>ordered list</h3>
+            <ol>
+                <li>
+                    Goku
+                    <ol>
+                        <li>Gogan</li>
+                        <li>Goten</li>
+                    </ol>
+                </li>
+                <li>Vegeta
+                    <ol>
+                        <li>Trunks</li>
+                        <li>Brah</li>
+                    </ol>
+                </li>
+                <li>Krillin</li>
+                <li>Yayirobe</li>
+            </ol>
+            <h3>images list</h3>
+            <ul class="images">
+                <li>Mike wazowski</li>
+                <li>Randall Boggs</li>
+                <li>boo</li>
+                <li>sullivan</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sprite<style></style></title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        div#sprite {
+            background: url(images/anim-sprite\ \(3\).png), no-repeat;
+            height: 256px;
+            mask-origin: 1rem auto;
+            width: 256px;
+        }
+        div#sprite.sp1{ background-position: calc(-256px*0)0; }
+        div#sprite.sp2{ background-position: calc(-256px*1)0; }
+        div#sprite.sp3{ background-position: calc(-256px*2)0; }
+        div#sprite.sp4{ background-position: calc(-256px*3)0; }
+        div#sprite.sp5{ background-position: calc(-256px*4)0; }
+        div#sprite.sp6{ background-position: calc(-256px*5)0; }
+
+       
+    </style>
+</head>
+<body>
+
+    <nav class="controls">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+        </a>
+    </nav>
+    <main>
+        <header>
+            <h1>sprite</h1>
+            <h2>  un sprite es una coleccion de imagenes dentro de una imagen </h2>
+        </header>
+        <section>
+            <div id="sprite" class="sp0"></div>
+        </section>
+    </main>
+    <script>
+        const sprite = document.getElementById("sprite")
+        let count    =1
+        let numSprite=6
+        setInterval(()=> {
+            sprite.className = ""
+            sprite.classList.add("sp" + count)
+            if (count == numSprite) {
+                count = 1
+            } else {
+                count++
+            }
+        },100)
+    </script>
+</body>
+</html>
