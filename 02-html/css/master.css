@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 body{ 
     background-color: hotpink;
+<<<<<<< HEAD
     background-image:url(https://static.vecteezy.com/system/resources/previews/006/897/565/non_2x/smooth-orange-wave-abstract-background-abstract-gradient-orange-background-vector.jpg);
+=======
+    background-image:url(https://img.freepik.com/vector-gratis/fondo-naranja-abstracto-lineas-efecto-semitono_1017-32107.jpg?size=626&ext=jpg&ga=GA1.1.1269040533.1711497600&semt=ais);
+>>>>>>> d5332ad641e5bd1c358fe67a33b81f9044f1b906
     background-attachment: fixed;
     background-size: cover;
      font-family:poppins,sans-serif
@@ -29,7 +33,7 @@ nav.controls{
         transform: scale(1);
     }
     svg {
-        transform: rotate(180deg);
+       /* transform: rotate(180deg); */
         width: 40px;
     }
 }
@@ -46,7 +50,9 @@ main {
         background-color:#fff9;
         color: #000600;;
         padding: 10px;
-        width: 400px;
+        width: 80%;
+        justify-content: center;
+        display: flex;
         h3 {
             border-bottom: 2px dotted #000400;
             color: #000600;
@@ -92,7 +98,11 @@ header {
     gap: 1rem;
 
     a:is(:link, :visited){
+<<<<<<< HEAD
         background-color:darksalmon;
+=======
+        background-color:#ffA834;
+>>>>>>> d5332ad641e5bd1c358fe67a33b81f9044f1b906
         border-radius: 50px;
         display: flex;
         color: black;
@@ -103,7 +113,11 @@ header {
         transition: all 0.5s ease-in;
         width: 280px;
         i{
+<<<<<<< HEAD
             background-color:orangered;
+=======
+            background-color:tomato;
+>>>>>>> d5332ad641e5bd1c358fe67a33b81f9044f1b906
             border-radius: 20px;
             color:ghostwhite;
             font-style: normal;

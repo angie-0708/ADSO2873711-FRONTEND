@@ -29,7 +29,7 @@ nav.controls{
         transform: scale(1);
     }
     svg {
-        transform: rotate(180deg);
+        /* transform: rotate(180deg); */
         width: 40px;
     }
 }
