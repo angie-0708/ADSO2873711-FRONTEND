@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-shadow<style></style></title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        main section h3 {
+            font-size: 1rem;
+        }
+        div.box {
+            background-color: #fff;
+            height: 100px;
+            margin-block: 1rem;
+            width: 200px;
+        }
+        div.box1 {box-shadow: 0 0 12px #333;}
+        div.box2 {box-shadow: -10px -10px 24px 4px #333;}
+        div.box3 {box-shadow: 0 -4px 24px #333 inset;}
+        div.box4 {
+            box-shadow: 4px 4px 0 4px #c5b807, 8px 8px 0 6px #0407dd, 12px 12px 0 8px #c21212;}
+            div.images{
+                display: flex;
+                gap: 0.5rem;
+                justify-content: center;
+                margin-block: 1rem;
+            }
+            div.images img:nth-child(1){
+                box-shadow: 0 0 12px 4px;
+            }
+            div.images img:nth-child(2){
+                filter: drop-shadow(0px 0px 12px);
+            }
+    </style>
+   
+</head>
+<body>
+
+    <nav class="controls">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+        </a>
+    </nav>
+    <main>
+        <header>
+            <h1>box-shadow</h1>
+            <h2> agrega sombrasas al elementos</h2>
+        </header>
+        <section>
+            <h3>box-shadow: 0 0 12px #333</h3>
+            <div class="box box1"></div>
+            <h3>box-shadow: -10px -10px 24px 4px #333</h3>
+            <div class="box box2"></div>
+            <h3>box-shadow: 0 -4px 24px #333 inset</h3>
+            <div class="box box3"></div>
+            <h4>box-shadow: multiple</h4>
+            <div class="box box4"></div>
+            <br>
+            <h3>box-shadow VS filter: drop-shadow()</h3>
+            <div class="images"></div>
+            <img src="images/BOO.jpg">
+            <img src="images/BOO.jpg">
+          
+        </section>
+    </main>
+</body>
+</html>
