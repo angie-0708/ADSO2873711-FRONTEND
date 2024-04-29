@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New background<style></style></title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        div.multiples {
+            border-radius: 10px;
+            border: 4px solid #fffd;
+            background: url(images/bg3.png),
+                        url(images/bg2.png),
+                        url(images/bg1.png);
+                       
+            margin-inline: auto;
+            margin-block: 1rem;
+            height: 453px;
+            width: 320px;
+            }
+            
+            section div {
+                border: 2px solid #fff9;
+                height: 200px;
+                margin-inline: auto;
+                width: 300px;
+            }
+            div.gradient1 {
+                background: linear-gradient(to left, red, blue);
+            }
+            div.gradient2 {
+                background: linear-gradient(45deg, rgb(253, 181, 181), rgb(122, 122, 221));
+            }
+        
+            div.gradient3{
+                background: linear-gradient(to bottom, #bb0 50%,
+                                                       #00b 50%, 
+                                                       #00b 75%,
+                                                       #b00 75%);
+            }
+            div.gradient4 {
+                background: linear-gradient(to right, #333 50%, #fff 0%);
+                background-size: 50PX 100%;
+            }
+            div.gradient5 {
+                background: radial-gradient(circle, #caa1e7, #210337);
+            }
+            div.gradient6 {
+                background: radial-gradient( #fff 10%,
+                                             #000 0%,
+                                             #000 20%,
+                                             #fff 10%,
+                                             #fff 30%,
+                                             #000 20%,
+                                             #000 40%,
+                                             #fff 30%,
+                                             #fff 50%);
+            }
+        section h4 {
+            margin: 0;
+            text-align: center;
+            font-size: 8rem;
+        }
+        h4.text-clip1 {
+            background: linear-gradient(to right, red, blue);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        h4.text-clip2 {
+            font-size: 4.3rem;
+            background: url(images/jacob-kiesow-349451-unsplash.jpg)no-repeat center;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+    </style>
+   
+</head>
+<body>
+
+    <nav class="controls">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+        </a>
+    </nav>
+    <main>
+        <header>
+            <h1>New background</h1>
+            <h2> new features (multiple, gradients, clip-text)</h2>
+        </header>
+        <section>
+            <h3>Bg multiple</h3>
+            <div class="multiples"></div>
+            <h3>Bg gradient</h3>
+            <h5>linear-gradient(to direction, color1, color2)</h5>
+            <div class="gradient1"></div>
+            <h5>linear-gradient(degress, color1, color2)</h5>
+            <div class="gradient2"></div>
+            <h5>colombia flag</h5>
+            <div class="gradient3"></div>
+            <h5>vertical lines</h5>
+            <div class="gradient4"></div>
+            <h5>radial-gradient(shape, color1, color2)</h5>
+            <div class="gradient5"></div>
+            <h5>bullsEye</h5>
+            <div class="gradient6"></div>
+            <h3>Bg clip</h3>
+            <h4 class="text-clip1">ADSO</h4>
+            <h4 class="text-clip2">FIRE</h4>
+        </section>
+    </main>
+</body>
+</html>

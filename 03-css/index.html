@@ -1,144 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>03-CSS</title>
-    <link rel="stylesheet" href="css/master.css">
-</head>
-<body>
-    <nav class="controls">
-        <a href="../index.html">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg>
-            
-            
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>03-CSS</title>
+        <link rel="stylesheet" href="css/master.css">
+        <style>
+         div.menus {
+            display: flex;
+            gap: 1rem;
+        }
+        @media screen and (max-width: 580px) {
+            div.menus {
+                flex-direction: column;
+            }
+        }
+    </style>
+    </head>
+    <body>
+        <nav class="controls">
+            <a href="../index.html">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path
+                        d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" /></svg
 
-        </a>
+                </a>
 
-    </nav>
-    <main>
-        <header>
-            <h1>CSS</h1>
-            <h2>Es un lenguaje que permite definir la apariencia de un sitio</h2>
-        </header>
-        <menu>
-            <a href="01-Document style.html">
-                <i>01</i>
-                <span>Document style</span>
-            </a>
-            <a href="02-css file.html">
-                <i>02</i>
-                <span>CSS file</span>
-            </a>
-            <a href="03-Attribute style.html">
-                <i>03</i>
-                <span>Attribute style</span>
-            </a>
-            <a href="04-basic-selectors.html">
-                <i>04</i>
-                <span>basic-selectors</span>
-            </a>
-            <a href="05-Advanced-Selectors.html">
-                <i>05</i>
-                <span>Advanced-Selectors</span>
-            </a>
-            <a href="06-Specificity.html" target="_blank">
-                <i>06</i>
-                <span>Specifity</span>
-            </a>
-            <a href="07-Inheritance.html">
-                <i>07</i>
-                <span>Inheritance</span>
-            </a>
-            <a href="08-Relative-Units.html">
-                <i>08</i>
-                <span>Relative-Units</span>
-            </a>
-            <a href="09-Absolute-Units.html">
-                <i>09</i>
-                <span>Absolute-Units</span>
-            </a>
-            <a href="10-Percentage.html">
-                <i>10</i>
-                <span>Percentage</span>
-            </a>
-            <a href="11-Colors.html">
-                <i>11</i>
-                <span>Colors</span> 
-            </a>
-            <a href="12-colors-alpha.html">
-                <i>12</i>
-                <span>colors-alpha</span> 
-            </a>
-            <a href="13-box-model.html">
-                <i>13</i>
-                <span>box-model</span> 
-            </a>
-            <a href="14-background.html">
-                <i>14</i>
-                <span>background</span> 
-            </a>
-            <a href="15-position.html">
-                <i>15</i>
-                <span>position</span> 
-            </a>
-            <a href="16-float.html">
-                <i>16</i>
-                <span>float</span> 
-            </a>
-            <a href="17-visualization.html">
-                <i>17</i>
-                <span>visualization</span> 
-            </a>
-            <a href="18-typography.html">
-                <i>18</i>
-                <span>typography</span> 
-            </a>
-            <a href="19-text.html">
-                <i>19</i>
-                <span>text</span> 
-            </a>
-            <a href="20-pseudoclasses.html">
-                <i>20</i>
-                <span>pseudo classes</span> 
-            </a>
-            <a href="21-lists.html">
-                <i>21</i>
-                <span>lists</span> 
-            </a>
-            <a href="22-cursors.html">
-                <i>22</i>
-                <span>cursors</span> 
-            </a>
-            <a href="23-sprite.html">
-                <i>23</i>
-                <span>23-sprite</span> 
-            </a>
-            <a href="SPRITE/index.html" target="_blank">
-                <i>23</i>
-                <span>SPRITE</span> 
-            </a>
-            <a href="25-new-selector.html">
-                <i>25</i>
-                <span>new-selector</span> 
-            </a>
-            <a href="26-border-radius.html">
-                <i>26</i>
-                <span>border radius</span> 
-            </a>
-            <a href="27-box-shadow.html">
-                 <i>27</i>
-                 <span>box-shadow</span> 
-            </a>
-            <a href="28-challenge-shadow.html">
-                <i>28</i>
-                <span>challenge-shadow</span> 
-            </a>
-            <a href="29-new-backgrounds.html">
-                 <i>29</i>
-                <span>-new backgrounds</span> 
-            </a>
-            <a href="30-text-shadow.html" target="_blank">
-                <i>30</i>
-                <span>text shadow</span> 
-            </a>
+            </nav>
+            <main>
+                <header>
+                    <h1>CSS</h1>
+                    <h2>Es un lenguaje que permite definir la apariencia de un
+                        sitio</h2>
+                </header>
+                <div class="menus">
+                    <menu>
+                        <a href="01-Document style.html">
+                            <i>01</i>
+                            <span>Document style</span>
+                        </a>
+                        <a href="02-css file.html">
+                            <i>02</i>
+                            <span>CSS file</span>
+                        </a>
+                        <a href="03-Attribute style.html">
+                            <i>03</i>
+                            <span>Attribute style</span>
+                        </a>
+                        <a href="04-basic-selectors.html">
+                            <i>04</i>
+                            <span>basic-selectors</span>
+                        </a>
+                        <a href="05-Advanced-Selectors.html">
+                            <i>05</i>
+                            <span>Advanced-Selectors</span>
+                        </a>
+                        <a href="06-Specificity.html" target="_blank">
+                            <i>06</i>
+                            <span>Specifity</span>
+                        </a>
+                        <a href="07-Inheritance.html">
+                            <i>07</i>
+                            <span>Inheritance</span>
+                        </a>
+                        <a href="08-Relative-Units.html">
+                            <i>08</i>
+                            <span>Relative-Units</span>
+                        </a>
+                        <a href="09-Absolute-Units.html">
+                            <i>09</i>
+                            <span>Absolute-Units</span>
+                        </a>
+                        <a href="10-Percentage.html">
+                            <i>10</i>
+                            <span>Percentage</span>
+                        </a>
+                        <a href="11-Colors.html">
+                            <i>11</i>
+                            <span>Colors</span>
+                        </a>
+                        <a href="12-colors-alpha.html">
+                            <i>12</i>
+                            <span>colors-alpha</span>
+                        </a>
+                        <a href="13-box-model.html">
+                            <i>13</i>
+                            <span>box-model</span>
+                        </a>
+                        <a href="14-background.html">
+                            <i>14</i>
+                            <span>background</span>
+                        </a>
+                        <a href="15-position.html">
+                            <i>15</i>
+                            <span>position</span>
+                        </a>
+                        <a href="16-float.html">
+                            <i>16</i>
+                            <span>float</span>
+                        </a>
+                        <a href="17-visualization.html">
+                            <i>17</i>
+                            <span>visualization</span>
+                        </a>
+                        <a href="18-typography.html">
+                            <i>18</i>
+                            <span>typography</span>
+                        </a>
+                        <a href="19-text.html">
+                            <i>19</i>
+                            <span>text</span>
+                        </a>
+                        <a href="20-pseudoclasses.html">
+                            <i>20</i>
+                            <span>pseudo classes</span>
+                        </a>
+                        <a href="21-lists.html">
+                            <i>21</i>
+                            <span>lists</span>
+                        </a>
+                        <a href="22-cursors.html">
+                            <i>22</i>
+                            <span>cursors</span>
+                        </a>
+                        <a href="23-sprite.html">
+                            <i>23</i>
+                            <span>23-sprite</span>
+                        </a>
+                        <a href="SPRITE/index.html" target="_blank">
+                            <i>23</i>
+                            <span>SPRITE</span>
+                        </a>
+                    </menu>
+                    <menu>
+                        <h3>reference 3</h3>
+                        <a href="25-new-selector.html">
+                            <i>25</i>
+                            <span>new-selector</span>
+                        </a>
+                        <a href="26-border-radius.html">
+                            <i>26</i>
+                            <span>border radius</span>
+                        </a>
+                        <a href="27-box-shadow.html">
+                            <i>27</i>
+                            <span>box-shadow</span>
+                        </a>
+                        <a href="28-challenge-shadow.html">
+                            <i>28</i>
+                            <span>challenge-shadow</span>
+                        </a>
+                        <a href="29-new-backgrounds.html">
+                            <i>29</i>
+                            <span>-new backgrounds</span>
+                        </a>
+                        <a href="30-text-shadow.html" target="_blank">
+                            <i>30</i>
+                            <span>text shadow</span>
+                        </a>
+                        <a href="31-filters.html" target="_blank">
+                            <i>31</i>
+                            <span>filters</span>
+                        </a>
+                        <a href="32-clip-patch.html" target="_blank">
+                            <i>32</i>
+                            <span>clip-patch</span>
+                        </a>
+                        <a href="33-web-fonts.html" target="_blank">
+                            <i>33</i>
+                            <span>web-fonts</span>
+                        </a>
+                        <a href="34-variantes.html" target="_blank">
+                            <i>34</i>
+                            <span>variantes</span>
+                        </a>
+                        <a href="35-transformation.html" target="_blank">
+                            <i>36</i>
+                            <span>transformation</span>
+                        </a>
+                        <a href="36-transition.html" target="_blank">
+                            <i>34</i>
+                            <span>transition</span>
+                        </a>
+                        <a href="37-animation.html" target="_blank">
+                            <i>37</i>
+                            <span>animation</span>
+                        </a>
+                        <a href="38-media-queries.html" target="_blank">
+                            <i>38</i>
+                            <span>media-queries</span>
+                        </a>
+                        <a href="39-challenge-responsive.html" target="_blank">
+                            <i>39</i>
+                            <span>challenge-responsive</span>
+                        </a>
+                        <a href="40-steps.html" target="_blank">
+                            <i>40</i>
+                            <span>steps</span>
+                        </a>
+                        <a href="41-functions.html" target="_blank">
+                            <i>42</i>
+                            <span>functions</span>
+                        </a>
+                        <a href="42-parallax.html" target="_blank">
+                            <i>42</i>
+                            <span>parallax</span>
+                        </a>
+                        <a href="43-flexbox.html" target="_blank">
+                            <i>43</i>
+                            <span>flexbox</span>
+                        </a>
+                        <a href="44-grids.html" target="_blank">
+                            <i>44</i>
+                            <span>grids</span>
+                        </a>
+                    </menu>
+                </div>
+            </main>
+        </body>
+    </html>
