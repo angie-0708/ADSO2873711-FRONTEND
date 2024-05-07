@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transicion<style></style></title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        section img {
+            display: block;
+            margin: 1rem auto;
+        }
+        img.trans1 {
+            transition: transform 0.5s ease-in;
+        }
+        img.trans1:hover{
+           transform: scale(1.2);
+        }
+        img.trans2 {
+            transition: transform 1s ease-out;
+        }
+        img.trans2:hover{
+          transform: rotate(-180deg);
+        }
+        img.trans3 {
+            transition: transform 1s ease-in-out;
+        }
+        img.trans3:hover {
+         transform: rotate(-180deg);
+        }
+        img.trans4 {
+            transition: transform 0.5s linear;
+        }
+        img.trans4:hover {
+         transform: rotate(180deg);
+        }
+        img.trans5 {
+            transition: transform 0.5s ease-in;
+        }
+        img.trans5:hover {
+         transform: translatex(100px);
+         }
+ 
+    </style>
+   
+</head>
+<body>
+
+    <nav class="controls">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+        </a>
+    </nav>
+    <main>
+        <header>
+            <h1>transicion</h1>
+            <h2> permite definir una transicion entre dos estados de elementos</h2>
+        </header>
+        <section>
+            <h3>ejemplo1</h3>
+            <img  class="trans1" src="images/90e0409abe4f8c49bafd314d5ec0d515-removebg-preview.png" width="150px" >
+            <h3>ejemplo2</h3>
+            <img class="trans2" src="images/90e0409abe4f8c49bafd314d5ec0d515-removebg-preview.png"  width="150px" >
+            <h3>ejemplo3</h3>
+            <img class="trans3" src="images/90e0409abe4f8c49bafd314d5ec0d515-removebg-preview.png"  width="150px" >
+            <h3>ejemplo4</h3>
+            <img class="trans4" src="images/90e0409abe4f8c49bafd314d5ec0d515-removebg-preview.png"  width="150px" >
+            <h3>ejemplo5</h3>
+            <img class="trans5" src="images/90e0409abe4f8c49bafd314d5ec0d515-removebg-preview.png"  width="150px" >
+
+        </section>
+    </main>
+</body>
+</html>
+
+

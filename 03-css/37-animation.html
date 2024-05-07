@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation<style></style></title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        section {
+
+            background: url(images/images-removebg-preview.png) no-repeat center;
+            width: 500px;
+            height: 500px;
+            }
+          
+            div.caballo{
+            position: relative;
+            top: 100px;
+            left: 0;
+            animation: 2s animpork infinite;
+        }
+        @keyframes animpork {
+            0% {left: 0px; transform: translatex(10px);}
+            20% {right: 90px; transform: translatex(90px);}
+            30% {right: 150px; transform: translatex(150px);}
+            50% {top:-100px; transform: scale(00.5s);}
+            70% {right: 200px; transform: translatex(200px);}
+            100% {right: 300px; transform: translatex(200px);}
+            }
+
+    
+
+      
+    </style>
+   
+</head>
+<body>
+
+    <nav class="controls">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+        </a>
+    </nav>
+    <main>
+        <header>
+            <h1>animation</h1>
+            <h2>le permite a un elemento cambiar gradualmente de un estilo a otro </h2>
+        </header>
+        <section>
+            <h3>example</h3>
+        <div class="caballo">
+            <img  class="img"  src="images/depositphotos_132291120-stock-illustration-chorse-is-running-jumping-smiling.webp-removebg-preview.png" width="200px">
+        </div>
+        </section>
+    </main>
+</body>
+</html>
