@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive desing (media queries)</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+        * {
+            transition: all 0.2s ease-in;
+        }
+
+        body {
+            background-color: rgba(255, 199, 243, 0.6);
+            color: #000;
+            font-family: poppins, sans-serif;
+            font-weight: 300;
+        }
+
+        main {
+            padding: 1rem;
+        }
+
+        main header figure.logo {
+            background: url(images/Ositos_cari_ositos-removebg-preview.png) no-repeat center;
+            margin: 0 auto;
+            width: 919px;
+            height: 354px;
+        }
+
+        main p {
+            line-height: 2rem;
+            text-align: justify;
+        }
+
+        main h1 {
+            font-size: 4rem;
+            text-align: center;
+        }
+
+        main h1 span.small,
+        main h1 span.medium {
+            display: none;
+        }
+
+        /* --------------*/
+        /*m e d i a   q u e r i e s */
+        /*--------------*/
+        @media (max-width: 1024px) {
+            div.class1 {
+                background: url(images/osito.jpg)no-repeat center;
+                width: 220px;
+                height: 117px;
+            }
+
+            main h1 span.small,
+            main h1 span.large {
+                display: none;
+            }
+
+            main h1 span.medium {
+                display: inline;
+            }
+
+            main h1 {
+                font-size: 2.8rem;
+            }
+        }
+
+        div.class2 {
+            background: url(images/osito.jpg)no-repeat center;
+            width: 220px;
+            height: 117px;
+        }
+
+        main h1 span.small,
+        main h1 span.large {
+            display: none;
+        }
+
+        main h1 span.medium {
+            display: inline;
+        }
+
+        main h1 {
+            font-size: 2.8rem;
+        }
+        
+        @media (max-width: 780px) {
+            main header figure.logo {
+                background: url(images/Ositos_cari_ositos-removebg-preview.png)no-repeat center;
+                width: 190px;
+                height: 101px;
+            }
+
+            main h1 span.medium,
+            main h1 span.large {
+                display: none;
+            }
+
+            main h1 span.small {
+                display: inline;
+            }
+
+            main h1 {
+                font-size: 2rem;
+            }
+        }
+
+        /*--------------*/
+        section {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+
+
+        }
+
+        section div {
+            background-color: #fff9;
+            position: relative;
+            height: 200px;
+            width: 260px;
+            top: 30px;
+
+        }
+
+        section div p {
+            background-color: rgba(70, 68, 68, 0.6);
+            position: absolute;
+            text-align: center;
+            color: black;
+            height: 40px;
+            bottom: -16px;
+            transition: all 0.4s ease-in;
+            width: 50%;
+
+        }
+
+        section div:hover p {
+            height: 70px;
+
+        }
+
+
+        section article img {
+            width: 150px;
+            left: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: center;
+
+        }
+
+
+
+        article img {
+            float: left;
+        }
+
+
+
+
+        article h4 {
+            clear: left;
+            height: 199px;
+            width: 900px;
+            line-height: 1.6rem;
+            margin: 5px auto;
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            text-align: left;
+            margin-left: 250px;
+            text-align: center;
+
+        }
+
+        article p {
+            font-size: 1.0rem;
+            height: 199px;
+            width: 500px;
+            line-height: 1.6rem;
+            overflow: scroll;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 30%;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <figure class="logo"></figure>
+        </header>
+        <section>
+            <div>
+                <img src="images/osito.jpg" alt="OC">
+                <p>0C (season1)</p>
+            </div>
+            <div>
+                <img src="mages/90e6d37770a240ee4875829c36e47db4\ \(2\).jpg" alt="OC">
+                <p>OC (season2)</p>
+            </div>
+            <div>
+                <img src="images/osito.jpg" alt="OC">
+                <p>OC (season3)</p>
+            </div>
+            <div>
+                <img src="mages/90e6d37770a240ee4875829c36e47db4\ \(2\).jpg" alt="OC">
+                <p>OC (season4)</p>
+            </div>
+
+            <article>
+                <h4 class="OC"></h4>
+                <img class="image1" src="images/osito.jpg" width="150px">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit, cupiditate ut eaque tempora porro
+                    facere sapiente harum doloribus. Reiciendis minima non tempora laborum optio deleniti molestiae, hic
+                    aspernatur fugit suscipit?
+                </p>
+                <h4></h4>
+                <img class="image2" src="images/osito.jpg" width="150px">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit, cupiditate ut eaque tempora porro
+                    facere sapiente harum doloribus. Reiciendis minima non tempora laborum optio deleniti molestiae, hic
+                    aspernatur fugit suscipit?
+                </p>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>

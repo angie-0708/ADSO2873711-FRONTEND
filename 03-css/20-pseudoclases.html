@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudoclasses<style></style></title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        nav {
+            margin-block: 1rem;
+        }
+        nav a:is(:link, :visited) {
+            background-color: #0009;
+            color: #fff9;
+            padding:0.4 0.8rem;
+            text-decoration: none;
+        }
+        /*
+        nav a:hover
+        */
+        nav a:is(:hover) {
+           background-color: #000; 
+           color: #fff;
+        }
+         /*
+        nav a:active
+        */
+        nav a:is(:active) {
+            background: #a00;
+        } 
+       /*
+        nav a:first-child
+        nav a:last-child
+        */
+        nav a:is(:first-child, :last-child) {
+            background-color: #009;
+        } 
+        input {
+            margin-block: 0.4rem;
+            padding: 0.4rem 0.8rem;
+            outline: none;
+        }
+         /*
+input:focus*/
+        
+        input:is(:focus) {
+           border: 2px solid #009;
+        }
+        p.paragraph:first-line {
+            background-color: rgba(4, 4, 255, 0.267);
+        }
+        p.paragraph:first-letter {
+            font-family:Satisfy;
+            font-size: 4rem;
+        }
+        div.heart{
+            background-color: transparent;
+            position: relative;
+            margin-block: 1rem;
+            height: 100px;
+            width: 50px;
+        }
+        div.heart:before{
+            background-color: #c00;
+            border-radius: 25px 25px 0 0;
+            position: absolute;
+            content: "";
+            height: 80px;
+            width: 50px;
+            transform-origin: center;
+            transform: rotate(-45deg) translateX(20px);
+            left: 100px;
+            top: 0;;
+        }
+        div.heart:after{
+            background-color: #c00;
+            border-radius: 25px 25px 0 0;
+            position: absolute;
+            content: "";
+            height: 80px;
+            width: 50px;
+            transform-origin: center;
+            transform: rotate(45deg) translateX(-20px);
+            left:  150px;
+            top: 0;
+        }
+    </style>
+   
+</head>
+<body>
+
+    <nav class="controls">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+        </a>
+    </nav>
+    <main>
+        <header>
+            <h1>pseudoclasses</h1>
+            <h2>  es usado para definir un estado especial de un elemento</h2>
+        </header>
+        <section>
+            <h3>linh|:hover|:active|:visited</h3>
+            <h4>first-child|:last-child</h4>
+            <nav>
+                <a href="#">option1</a>
+                <a href="#">option2</a>
+                <a href="#">option3</a>
+                <a href="#">option4</a>
+            </nav>
+            <h3>focus|:blur</h3>
+            <input type="" placeholder="enter your name">
+            <br>
+            <input type="" placeholder="enter your last name">
+            <h3>:first-letter|:first-line</h3>
+            <p class="paragraph">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, quasi. Itaque voluptatibus animi reiciendis atque quae similique quia nam harum, nihil pariatur? In maiores omnis, quae sed sequi doloremque quos.
+                </p>
+                <h3>before|:after</h3>
+                <div class="heart"></div>
+            
+        </section>
+    </main>
+</body> 
+</html>

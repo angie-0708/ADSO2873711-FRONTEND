@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive desing (media queries)<style></style></title>
+    <style>
+        @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap);
+        *{
+            transition: all 0.2s ease-in;
+        }
+        body {
+            background-color: #003675;
+            color: #fffc;
+        font-family: poppins, sans-serif;
+        font-weight: 400;
+        }
+        main {
+            padding: 2rem;
+        }
+        main header figure.logo {
+            background: url(images/pepsi01.png) no-repeat center;
+            margin: 0 auto;
+            width: 919px;
+            height: 354px;
+        }
+        main p {
+            line-height: 2rem;
+            text-align: justify;
+        }
+        main h1 {font-size: 4rem;
+            text-align: center;
+        }
+        main h1 span.small,
+        main h1 span.medium {
+            display: none;
+        }
+        /*---------------------------*/
+        /*      MEDIA QUERIES       */
+        /*---------------------------*/
+        @media (max-width: 1024px) {
+            main header figure.logo {
+            background: url(images/pepsi01.png) no-repeat center;
+            margin: 0 auto;
+            width: 919px;
+            height: 354px;
+            }
+
+            main h1 span.small,
+            main h1 span.large {
+            display: none;
+            }
+            main h1 span.medium {
+            display: inline;
+            }
+             main h1 {
+            font-size: 2.8rem;
+    
+            }
+        }   
+        @media (max-width: 780px) {
+            main header figure.logo {
+            background: url(images/pepsi01.png) no-repeat center;
+            width: 162Px;
+            height: 156px;
+            }
+
+            main h1 span.medium,
+            main h1 span.large {
+            display: none;
+            }
+            main h1 span.small {
+            display: inline;
+            }
+             main h1 {
+            font-size: 2.8rem;
+    
+            }
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <figure class="logo"></figure>
+        <section>
+            <h1>
+                media queries
+                <span class="large">(> 1024px)</span> 
+                <span class="medium">( < 1024px)</span>
+                <span class="small">(> 780px)</span>
+            </h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus minima inventore beatae repellat est ratione perferendis incidunt praesentium, adipisci error facere at veniam ex quia molestiae ducimus ad, iure id aperiam. Atque quasi excepturi dolor quia dignissimos, laboriosam aut debitis necessitatibus, doloremque illo officia ipsam odit quisquam? Dolores ipsam vero cum quaerat blanditiis maiores cumque ratione rerum in praesentium, totam suscipit explicabo doloremque, eos unde possimus nam id consequatur optio fugiat quam voluptatibus et quia! Quaerat et consequatur quas molestias minima temporibus quisquam. Delectus voluptate quibusdam, magnam, ad eligendi asperiores fugit corrupti eveniet sunt quasi quia aliquid magni maiores reprehenderit!</p>
+        </section>
+    </main>
+</body>
+</html>
