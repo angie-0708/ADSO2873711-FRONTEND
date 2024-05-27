@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head> 
+    <meta charset="UTF-8">
+    <tittle>JavaScript</tittle>
+    <link rel="stylesheet" href="../css/master.css">
+  </head>
+  <body> 
+    <nav class="controls"> <a href="../index.html"></a></nav>
+    <main> 
+      <header> 
+        <h1>JavaScript</h1>
+      </header>
+      <section> 
+        <h2 class="msg"> </h2>
+      </section>
+      <script>
+        let msg = document.querySelector(".msg")
+        let name = prompt("Whats your name?")
+        if (name == "juan") {
+            msg.textContent = "Welcome Aprendiz: " + name
+        } else {
+            msg.textContent = "Welcome: " + name
+        }
+      </script>
+    </main>
+  </body>
+</html>

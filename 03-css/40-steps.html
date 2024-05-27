@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>steps<style></style></title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        div.steps {
+            position: relative;
+            margin: 0 auto;
+            height: 280px;
+            width: calc(1024px /  4);
+            animation: animSteps 0.6s steps(4) infinite;
+        }
+        div.steps01 {
+            background: url(images/steps-01.png) no-repeat;
+        }
+        div.steps02 {
+            background: url(images/steps-02.png) no-repeat;
+        }
+        div.steps03 {
+            background: url(images/steps-03.png) no-repeat;
+        }
+        @keyframes animSteps {
+            100% { background-position: -1024px;}
+        }
+    </style>
+   
+</head>
+<body>
+
+    <nav class="controls">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+        </a>
+    </nav>
+    <main>
+        <header>
+            <h1>steps</h1>
+            <h2>  nos permite animar por pasos un sprite </h2>
+        </header>
+        <section>
+            <h3>Example01:</h3>
+            <div class="steps steps01"></div>
+            <h3>Example02:</h3>
+            <div class="steps steps02"></div>
+            <h3>Example03:</h3>
+            <div class="steps steps03"></div>
+        </section>
+    </main>
+</body>
+</html>

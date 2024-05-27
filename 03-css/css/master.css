@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 body{ 
     background-color: hotpink;
-    background-image:url(https://www.downloadsource.net/image/uploaded/Windows_11_Wallpapers/img0.jpg?s=1b5397cc7962597f0cce3e15283b667d);
+    background-image:url(https://images.unsplash.com/photo-1566228015668-4c45dbc4e2f5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     background-attachment: fixed;
     background-size: cover;
      font-family:poppins,sans-serif
@@ -44,20 +44,21 @@ main {
     section{
         border-radius: 10px;
         background-color:#fff9;
-        color: #000600;;
+        color: #000;;
         padding: 10px;
+        width: 400px;
     
        
         h3 {
             border-bottom: 2px dotted #000400;
             color: #000600;
-            font-size: 1.6rem;
+            font-size: 2rem;
             margin: 0;
             width: fit-content;
     
         }
         p{
-            font-size: 1.4rem;
+            font-size: 2rem;
             margin: 10px 0;
         }
         xmp {
@@ -65,6 +66,7 @@ main {
             background: color #000900;;
             color:#fff9;
             padding: 0 10px 10px 10px;
+            width: 375px;
     
         }
     }
@@ -104,7 +106,7 @@ header {
         transition: all 0.5s ease-in;
         width: 280px;
         i{
-            background-color:blue;
+            background-color:rgb(69, 69, 255);
             border-radius: 20px;
             color:ghostwhite;
             font-style: normal;

@@ -1,0 +1,22 @@
+doctype 
+html(lang="es")
+    head 
+        meta(charset="UTF-8")
+        tittle JavaScript
+        link(rel="stylesheet", href="../css/master.css")
+    body 
+        nav.controls 
+            a(href="../index.html")
+        main 
+            header 
+                h1 JavaScript
+            section 
+                h2.msg 
+            script. 
+                let msg = document.querySelector(".msg")
+                let name = prompt("Whats your name?")
+                if (name == "juan") {
+                    msg.textContent = "Welcome Aprendiz: " + name
+                } else {
+                    msg.textContent = "Welcome: " + name
+                }

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>responsive desing (media queries)</title>
-    <style>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>responsive desing (media queries)</title>
+        <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 
         * {
@@ -44,6 +44,42 @@
         main h1 span.medium {
             display: none;
         }
+        div.images {
+            border: 2px solid #df1515;
+            display: flex;
+            flex-wrap: wrap;
+            width: 90%;
+            gap: 1.5rem;
+            text-align: center;
+            justify-content: center;
+            margin: 50px auto;
+            padding: 1.5rem;
+        }
+        div.caja {
+            width: 250px;
+            margin: 20px 15px;
+            -webkit-box-shadow: -1px 1px 30px 8px #000;
+            -moz-box-shadow: -1px 1px 30px 8px #000;
+            box-shadow: -1px 1px 30px 8px #000;
+        }
+        div.cajaTexto {
+            width: 100%;
+            color: aliceblue;
+            background-color: #567;
+            height: 60px;
+        }
+        div.cajaTexto:hover {
+            transform: translateY(-25px);
+        }
+        div.osito {
+            max-width: 210px;
+        }
+        
+
+
+
+        
+
 
         /* --------------*/
         /*m e d i a   q u e r i e s */
@@ -67,12 +103,6 @@
             main h1 {
                 font-size: 2.8rem;
             }
-        }
-
-        div.class2 {
-            background: url(images/osito.jpg)no-repeat center;
-            width: 220px;
-            height: 117px;
         }
 
         main h1 span.small,
@@ -107,6 +137,12 @@
             main h1 {
                 font-size: 2rem;
             }
+            div.class1 {
+                background: url(images/osito.jpg)no-repeat center;
+                width: 220px;
+                height: 117px;
+            }
+
         }
 
         /*--------------*/
@@ -194,49 +230,73 @@
 
         }
     </style>
-</head>
+    </head>
 
-<body>
-    <main>
-        <header>
-            <figure class="logo"></figure>
-        </header>
-        <section>
-            <div>
-                <img src="images/osito.jpg" alt="OC">
-                <p>0C (season1)</p>
-            </div>
-            <div>
-                <img src="mages/90e6d37770a240ee4875829c36e47db4\ \(2\).jpg" alt="OC">
-                <p>OC (season2)</p>
-            </div>
-            <div>
-                <img src="images/osito.jpg" alt="OC">
-                <p>OC (season3)</p>
-            </div>
-            <div>
-                <img src="mages/90e6d37770a240ee4875829c36e47db4\ \(2\).jpg" alt="OC">
-                <p>OC (season4)</p>
-            </div>
+    <body>
+        <main>
+            <header>
+                <figure class="logo"></figure>
+            </header>
+            <section>
+                <div class="images">
+                    <div class="caja">
+                        <img src="images/osito.jpg" class="osito">
+                        <div class="cajaTexto">
+                            <p class="tarjetaTexto">0C (season1)</p>
+                        </div>
+                    </div>
 
-            <article>
-                <h4 class="OC"></h4>
-                <img class="image1" src="images/osito.jpg" width="150px">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit, cupiditate ut eaque tempora porro
-                    facere sapiente harum doloribus. Reiciendis minima non tempora laborum optio deleniti molestiae, hic
-                    aspernatur fugit suscipit?
-                </p>
-                <h4></h4>
-                <img class="image2" src="images/osito.jpg" width="150px">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit, cupiditate ut eaque tempora porro
-                    facere sapiente harum doloribus. Reiciendis minima non tempora laborum optio deleniti molestiae, hic
-                    aspernatur fugit suscipit?
-                </p>
-            </article>
-        </section>
-    </main>
-</body>
+                    <div class="caja">
+                        <img src="images/osito.jpg" class="osito">
+                        <div class="cajaTexto">
+                            <p class="tarjetaTexto">0C (season1)</p>
+                        </div>
+                    </div>
 
-</html>
+                    <div class="caja">
+                        <img src="images/osito.jpg" class="osito">
+                        <div class="cajaTexto">
+                            <p class="tarjetaTexto">0C (season1)</p>
+                        </div>
+                    </div>
+                    <div>
+
+                        <div class="caja">
+                            <img src="images/osito.jpg" class="osito">
+                            <div class="cajaTexto">
+                                <p class="tarjetaTexto">0C (season1)</p>
+                            </div>
+                        </div>
+                        <div>
+
+                            <article>
+                                <h4 class="OC"></h4>
+                                <img class="image1" src="images/osito.jpg"
+                                    width="150px">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur,
+                                    adipisicing elit. Fugit, cupiditate ut eaque
+                                    tempora porro
+                                    facere sapiente harum doloribus. Reiciendis
+                                    minima non tempora laborum optio deleniti
+                                    molestiae, hic
+                                    aspernatur fugit suscipit?
+                                </p>
+                                <h4></h4>
+                                <img class="image2" src="images/osito.jpg"
+                                    width="150px">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur,
+                                    adipisicing elit. Fugit, cupiditate ut eaque
+                                    tempora porro
+                                    facere sapiente harum doloribus. Reiciendis
+                                    minima non tempora laborum optio deleniti
+                                    molestiae, hic
+                                    aspernatur fugit suscipit?
+                                </p>
+                            </article>
+                        </section>
+                    </main>
+                </body>
+
+            </html>

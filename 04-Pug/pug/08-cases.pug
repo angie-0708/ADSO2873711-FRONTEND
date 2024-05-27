@@ -1,0 +1,25 @@
+doctype 
+html(lang="es")
+    head 
+        meta(charset="UTF-8")
+        tittle Cases
+        link(rel="stylesheet", href="../css/master.css")
+    body 
+        nav.controls 
+            a(href="../index.html")
+        main 
+            header 
+                h1 Cases
+            section 
+                -var friends = 300
+                case friends 
+                    when 0
+                        h4 you dont have friends
+                    when 1
+                        h4 You have a friend
+                    when 2
+                    when 3
+                    when 4
+                        h4 You have few friends
+                    default
+                        h4 Yoy have #{friends} friends
