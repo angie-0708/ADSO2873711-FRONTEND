@@ -94,7 +94,7 @@ header {
     gap: 0.4rem;
 
     a:is(:link, :visited){
-        background-color:seashell;
+        background-color:rgb(132, 53, 134);
         border-radius: 50px;
         display: flex;
         color:black;
@@ -108,7 +108,7 @@ header {
  }
 
 i{
-    background-color:rgb(0, 139, 116);
+    background-color:rgb(169, 21, 228);
     border-radius: 20px;
     color:aliceblue;
     font-style: normal;
@@ -121,7 +121,7 @@ i{
 }
 a:is(:hover) i {
     transform: translate(-10px);
-    background-color:rgb(14, 207, 207);
+    background-color:rgb(62, 39, 71);
 }
 a:is(:hover) i {
     transform: scale(1.4);
