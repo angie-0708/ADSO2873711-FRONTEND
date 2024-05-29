@@ -9,6 +9,7 @@ body main section.content h2:after {
   top: calc(100% + 10px);
   width: 80%;
 }
+
 body main section.content h2 {
   border-bottom: none;
   color: #d94d9b;
@@ -17,6 +18,7 @@ body main section.content h2 {
   position: relative;
   text-align: center;
 }
+
 body main section.content h2:before {
   background: linear-gradient(to right, #d94d9b, #fff);
   content: "";

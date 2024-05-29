@@ -28,10 +28,10 @@ section.content {
   text-align: center;
 }
 section.content figure {
-  background: #fff url(../images/0c9ca06c106749d7ad564b95ba525ad6-removebg-preview.png) no-repeat center;
+  background: #fff url(../imgs/inosuke.jpg) no-repeat center;
   background-size: cover;
   border: 2px solid #d94d9b;
-  border-radius: 100px;
+  border-radius: 110px;
   display: inline-block;
   height: 200px;
   margin: 10px;
