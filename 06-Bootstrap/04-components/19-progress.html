@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/master.css">
+</head>
+
+<body>
+    <nav class="controls">
+        <a href="../index.html">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path fill="#ffffff"
+                    d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+            </svg>
+        </a>
+    </nav>
+    <main>
+        <header>
+            <h1>Progress</h1>
+            <h2>
+                Documentación y ejemplos para usar barras de progreso personalizadas de Bootstrap que admiten barras
+                apiladas, fondos animados y etiquetas de texto.
+
+        </header>
+        <section class="content">
+            <h3 class="mb-4">Example:</h3>
+            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0"
+                aria-valuemax="100">
+                <div class="progress-bar bg-success  progress-bar-animated progress-bar-striped" style="width: 25%"></div>
+            </div>
+            <br>
+            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0"
+                aria-valuemax="100">
+                <div class="progress-bar bg-info   progress-bar-animated progress-bar-striped" style="width: 50%"></div>
+            </div>
+            <br>
+            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0"
+                aria-valuemax="100">
+                <div class="progress-bar bg-warning progress-bar-animated progress-bar-striped" style="width: 75%"></div>
+            </div>
+            <br>
+            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="100" aria-valuemin="0"
+                aria-valuemax="100">
+                <div class="progress-bar bg-danger progress-bar-animated progress-bar-striped" style="width: 100%"></div>
+                <h3 class="my-4">Dinamic Progress:</h3>
+                <div class="progress" style="height: 1.6rem">
+                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" id="pg"
+                        role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+                </div>
+
+                <script>
+                    let pg = document.getElementById('pg');
+                    let vl = 0;
+                    let intv = setInterval(function () {
+                        if (vl < 100) {
+                            vl += 1;
+                            pg.innerText = vl + "%";
+                            pg.setAttribute('aria-valuenow', vl);
+                            pg.setAttribute('style', 'width: ' + vl + '%');
+                        } else {
+                            clearInterval(intv);
+                        }
+                    }, 100);
+                </script>
+            </div>
+
+
+
+        </section>
+    </main>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
