@@ -3,189 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <style>
-        section {
+        div.col-md-6{
+            position: relative;
+            top: 50px;
+            right: 120px;
+        }
+        .hero-section {
+            background: linear-gradient(65deg, #C3C3C3 50%, #927FC7 50%);
+        }
+        .avatar {
+            max-width: 520px;
+        }
+        .service-card {
+            border: 5px solid  #927FC7;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .project-card img {
             width: 100%;
-            height: 750px;
+            height: auto;
+            border-radius: 10px;
         }
-        section.one {
-            background-image: url(../images/Group\ 7.png);
-            background-size: cover;
-            background-repeat: no-repeat;
-
-            div{
-                height: 70px;
-                align-items: center;
-                justify-content: center;
-                display: flex;
-            }
-            
-            div.foto{
-                height: 750px;
-                justify-content: center;
-                align-items: end;
-                display: flex;
-            }
-            div.text{
-                height: 750px;
-                justify-content: start;
-                align-items: center;
-
-                button{
-                    background-color:#927FC7;
-                    width: 135px;
-                    height: 57px;
-                    position: relative;
-                    top: 180px;
-                    left: -680px;
-                }
-            }
-
-            p.hello{
-                font-size: 28pt;
-                position: relative;
-                bottom: 2;
-            }
-        }
-        
-        
-        section.two{
-            background-color: #FFFFFF;
-            div{
-            
-                height: 100%;
-            }
-
-            div.fs{
-                justify-content: center;
-                align-items: center;
-                display: flex;
-
-                img.fss{
-                    margin-top: 100px;
-                }
-            }
-            div.progress{
-                height: 16.5px;
-                background-color:  #E9E9E9;
-            }
-            div.progress-bar{
-                background-color: #927FC7;
-            }
-            div.text{
-                
-                height: calc(750px / 2);
-                img.txt{
-                    position: relative;
-                    top: 150px;
-                }
-            }
-            div.barras{
-                height: calc(750px / 2);
-            }
-        }
-        section.three {
-            height: 910px;
-            background-color: #f8f8f8;
-
-            div.a{
-                height: 315px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            div.b{
-                height: 595px;
-            }
-        }
-        section.four {
-            height: 636px;
-            background-color: #FFFFFF;
-        }
-        section.five {
-            height: 551px;
-            background-color: #f8f8f8;
-        }
-        
     </style>
 </head>
 <body>
-    <section class="one" id="one">
-       <div class="fixed-top row">
-        <div class="col-lg-2 col-md-1">
-            <a href="#one"><img class="logo" src="../images/Group 1.png"></a>
-        </div>
-        <div class="col-lg-2"></div>   
-        <div class="col-lg-3"></div>   
-        <div class="col-lg-5">
-            <ul class="nav">
-                <li class="nav-item">
-                  <a class="nav-link text-black-50" href="#one">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-black-50" href="#two">About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-black-50" href="#three">Services</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-black-50" href="#four"">Portfolio</a>
-                </li>
-              </ul>
-        </div>
-    </div>
-    <div class="row">
-        <div class="text col-lg-4">
-           <img class="ms-5" src="../images/Group 12.png" alt="">
-           <button type="button" class="btn text-white">Hire Me</button>
-        </div>
-        <div class="foto col-lg-4 col-md-12"><img src="../images/cbc7b8e7-de58-4727-9ba2-6e5621070cd5-removebg 1 (1).png"></div>
-        <div class="foto col-lg-4"></div>
-    </div>
-    </section>
-    <section class="two" id="two">
-        <div class="row">
-            <div class="fs col-lg-4"><img class="fss" src="../images/Group 10.png"></div>
-            <div class="col-lg-2"></div>
-            <div class="col-lg-5">
-                <div class="row">
-                    <div class="text col-lg-12"> 
-                        <img class="txt" src="../images/Group 11.png">
-                    </div>
-                    <div class="barras col-lg-12">
-                        <h5 class="m-2 mt-5">UI/UX DESIGN</h5>
-                        <div class="progress m-2" role="progressbar" aria-label="Success" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
-                            <div class="progress-bar " style="width: 40%"></div>
-                        </div>
 
-                        <h5 class="m-2 mt-3">Web Design</h5>
-                        <div class="progress m-2" role="progressbar" aria-label="Info" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                            <div class="progress-bar " style="width: 75%"></div>
-                        </div>
-                        <h5 class="m-2 mt-3">HTML / CSS</h5>
-                        <div class="progress m-2" role="progressbar" aria-label="Warning" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
-                            <div class="progress-bar " style="width: 95%"></div>
-                        </div>
-                        <h5 class="m-2 mt-3">Sketch</h5>
-                        <div class="progress m-2" role="progressbar" aria-label="Danger" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
-                            <div class="progress-bar " style="width: 10%"></div>
-                        </div>
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <img style="height: 40px; height: 40px; margin: 5px;" src="../images/img2.jfif" alt="">
+            <a class="navbar-brand" href="#">Angie Rios</a>
+            <button class="navbar-toggler" type="button" 
+            data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#service">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portafolio">Portafolio</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="home" class="hero-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h4 class="text" style="color: #927FC7;">Hello I'm</h4>
+                    <h1 class="display-4 fw-bold" style="color: black;">Angie Rios</h1>
+                    <p class="lead" style="color: black;">Professional Freelance Web Designer</p>
+                    <p style="color: black;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+                    <button class="btn" style="background-color: #927FC7; border: #927FC7; color: white;">Hire me</button>
+                </div>
+                <div class="col-md-6 text-center ">
+                    <img  src="../images/cbc7b8e7-de58-4727-9ba2-6e5621070cd5-removebg 1 (1).png " style="height: 440px;" alt="Avatar" class="avatar img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="about-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="../images/Group 10.png" style="height: 580px;" class="avatar">
+                </div>
+                <div class="col-md-6 text-center">
+            <h2>Why You Hire Me?</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore voluptates perferendis, quibusdam nam placeat officia dolores hic impedit quo perspiciatis autem commodi reprehenderit minima earum a quae maiores harum quidem optio. Soluta eius debitis placeat explicabo neque. Quod ut vero blanditiis perferendis, ex quis nesciunt maiores ad harum? Soluta, aliquid!.</p>
+            <p class="text-hulk"><b>UI/UX Design</p></b>
+            <div class="progress mb-3">
+                <div class="progress-bar" role="progressbar" style="width: 85%; background-color: #927FC7; color: white;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">85%</div>
+            </div>
+            <p class="text-hulk"><b>Web Design</p></b>
+            <div class="progress mb-3">
+                <div class="progress-bar" role="progressbar" style="width: 75%; background-color: #927FC7; color: white;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">75%</div>
+            </div>
+            <p class="text-hulk"><b>HTML / CSS</p></b>
+            <div class="progress mb-3">
+                <div class="progress-bar" role="progressbar" style="width: 90%; background-color: #927FC7; color: white;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">90%</div>
+            </div>
+            <p class="text-hulk"><b>Sketch</p></b>
+            <div class="progress mb-3">
+                <div class="progress-bar" role="progressbar" style="width: 65%; background-color: #927FC7; color: white;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">65%</div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div id="service" class="services-section py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Services I Provide</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="text-recuad">
+                        <img src="../images/img6.jfif" alt="">
                     </div>
                 </div>
             </div>
-            <div class="col-lg-1">
         </div>
-    </section>
-    <section class="three" id="three">
-        <div class="row">
-            <div class="a col-lg-12">
-                <img src="../images/Group 13.png" alt="">
+    </div>
+
+    <!-- Portfolio Section -->
+    <div id="portafolio" class="portfolio-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Latest Projects</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="project-card">
+                        <img style="height: 270px;" src="../images/img5.jfif" alt="imagen 1">
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="project-card">
+                        <img style="height: 270px;" src="../images/img4.jfif" alt="imagen 2">
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="project-card">
+                        <img style="height: 270px;" src="../images/img7.jfif" alt="imagen 3">
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
-    <section class="four" id="four"></section>
-    <section class="five"></section>
+    </div>
+    <footer class="bg-light py-4">
+        <div class="container text-center">
+            <img style="height: 25px; height: 25px; margin: 5px;" src="../images/avatar.png" alt="">
+            <a>Angie Rios</a>
+            <div class="social-icons">
+                <a href="#" class="me-3" style="color: #333;"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="me-3" style="color: #333;"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="me-3" style="color: #333;"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="me-3" style="color: #333;"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>someone@example.com</p>
+            <nav>
+                <a href="" class="me-3" >Home</a>
+                <a href="" class="me-3">About</a>
+                <a href="" class="me-3">Services</a>
+                <a href="#portafolio" class="me-3">Portafolio</a>
+            </nav>
+        </div>
+    </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
