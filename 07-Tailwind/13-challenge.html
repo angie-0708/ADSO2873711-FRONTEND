@@ -1,35 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>13-challenge</title>
-    <link rel="stylesheet" href="css/master.css">
-
+    <style>
+        body {
+            background-color: #1E1E1E;
+        }
+        section {
+            height: 730px;
+            width: 384px;
+        }
+        .hidden {
+            display: none;
+        }
+        .points {
+            position: relative;
+            top: 23px;
+        }
+    </style>
 </head>
+<body class="flex justify-center pt-[7%] gap-[27px]">
+    <section id="one" class="rounded-[25px] bg-[#E08F43]">
+        <div class="image h-[400px] w-[384px]">
+            <img src="images/6cdeb32729e6d1140d29887900d16922 1.png" alt="Zootopia Image">
+        </div>
+        <div class="points h-[25px] w-[80px] mx-auto">
+            <img src="images/points.png" class="points" alt="Points">
+        </div>
+        <div class="text1 w-[155px] h-[76px] mx-auto pt-[32px]">
+            <h1 class="text-black-[48px] font-bold text-[30px]">ZOOTOPIA</h1>
+        </div>
+        <div class="text2">
+            <h2 class="w-[242px] text-center mx-auto font-semibold pt-[10px] text-[#3b3b3b75]">Are you ready to explore the world of zootopia?</h2>
+        </div>
+        <div class="button pt-[22px] px-24">
+            <button onclick="showSection('two')" class="bg-[#000000] text-[#FFFFFF] h-[53px] w-[192px] rounded-[8px] text-[14px]">Get Started</button>
+        </div>
+    </section>
 
-<body>
-    <nav class="controls">
-        <a href="index.html">
-            <svg xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                <path fill="#ffffff"
-                    d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
-            </svg>
-        </a>
-    </nav>
-    <main>
-        <header>
-            <h1>Challenge</h1>
-            <h2>Utilidades para controlat la margen, el relleno  y espacio entre elementos hijos </h2>
-        </header>
-        <section class="content">
-			
-        </section>
+    <section id="two" class="rounded-[25px] bg-[#7A6255] pt-[20px] pl-[10px] hidden">
+        <button onclick="showSection('one')" class="back">
+            <img src="images/Vector.png" class="pt-3 pl-3 w-[30px]" alt="Back">
+        </button>
+        <div class="tilte pl-8 pt-2">
+            <h1 class="text-black text-[32px] font-bold">Zootopia Characters</h1>
+        </div>
+        <div class="stat1 flex pl-8 pt-4">
+            <div class="w-[50px] h-[50px] pt-4">
+                <img src="images/img1.png" alt="Judy Hopps">
+            </div>
+            <div class="textCont h-20 ml-2">
+                <h3 class="text-[#000000] text-[30px] font-bold">Judy</h3>
+                <h5 class="text-[#22222275] text-[12px] font-bold">Meet Judy Hopps</h5>
+            </div>
+        </div>
 
-    </main>
+        <div class="imgG mx-auto">
+            <img src="images/imgr.png" class="w-[280px] h-[131px] mx-auto" alt="Image">
+        </div>
+
+        <div class="stat1 flex pl-8 pt-4">
+            <div class="w-[50px] h-[50px] pt-4">
+                <img src="images/img2.png" alt="Nick Wilde">
+            </div>
+            <div class="textCont ml-2">
+                <h3 class="text-[#000000] text-[30px] font-bold">Nick</h3>
+                <h5 class="text-[#22222275] text-[12px] font-bold">Meet Nick Wilde</h5>
+            </div>
+        </div>
+        <div class="stat1 flex pl-8 pt-4">
+            <div class="w-[50px] h-[50px] pt-4">
+                <img src="images/img3.png" alt="Explore Zootopia">
+            </div>
+            <div class="textCont h-20 ml-2">
+                <h3 class="text-[#000000] text-[30px] font-bold">Zootopia</h3>
+                <h5 class="text-[#22222275] text-[12px] font-bold">Explore Zootopia</h5>
+            </div>
+        </div>
+        
+        <div class="stat1 flex pl-8 pt-4">
+            <div class="w-[50px] h-[50px] pt-4">
+                <img src="images/img4.png" alt="Equipment">
+            </div>
+            <div class="textCont h-20 ml-2">
+                <h3 class="text-[#000000] text-[30px] font-bold">Equipment</h3>
+                <h5 class="text-[#22222275] text-[12px] font-bold">Solve Mysteries</h5>
+            </div>
+        </div>
+        <div class="button pt-[22px] px-[23%] mx-auto">
+            <button onclick="showSection('three')" class="bg-[#000000] text-[#FFFFFF] h-[53px] w-[192px] rounded-[8px] text-[14px]">Get Started</button>
+        </div>
+    </section>
+
+    <section id="three" class="rounded-[25px] bg-[#E08F43] pt-[20px] pl-[10px] hidden">
+        <button onclick="showSection('two')" class="back">
+            <img src="images/Vector.png" class="pt-3 pl-3 w-[30px]" alt="Back">
+        </button>
+        <div class="text1 w-[155px] h-[76px] pl-14">
+            <h1 class="text-black-[48px] font-bold text-[30px] w-[700px] h-[200px] text-center pr-[450px]">Choose Your Adventure</h1>
+        </div>
+        <div class="pt-12">
+            <img src="images/cuadro.png" class="w-[340px] mx-auto" alt="Quiz Image">
+        </div>
+        <div class="text-[#3b3b3b75] text-center text-[16px] w-[169px] h-[68px] mx-auto pt-[50px] font-bold">
+            <h3>Take a quiz to find your ideal character. It will take about 10 minutes</h3>
+        </div>
+        <div class="button pt-[125px] px-24">
+            <button onclick="showSection('one')" class="bg-black text-[#CFCFCF] h-[53px] w-[192px] rounded-[8px] text-[14px]">Start Test</button>
+        </div>
+    </section>
+
 </body>
+
+    <script>
+        function showSection(sectionId) {
+            document.getElementById('one').classList.add('hidden');
+            document.getElementById('two').classList.add('hidden');
+            document.getElementById('three').classList.add('hidden');
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+    </script>
 
 </html>
