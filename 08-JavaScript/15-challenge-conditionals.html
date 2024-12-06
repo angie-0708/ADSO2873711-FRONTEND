@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación del Clima</title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .weather-card {
+            width: 300px;
+            border-radius: 15px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            background-size: cover;
+            color: white;
+        }
+
+        /* Fondo diurno */
+        .day-mode {
+            background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20231002/pngtree-3d-rendered-cartoon-sky-background-image_13548262.png');
+            color: #333;
+        }
+
+        /* Fondo nocturno */
+        .night-mode {
+            background-image: url('https://png.pngtree.com/background/20230408/original/pngtree-cartoon-night-sky-with-moon-and-stars-background-picture-image_2339405.jpg');
+            color: #fff;
+        }
+
+        .weather-header h2 {
+            margin: 5px 0;
+            font-size: 1.5rem;
+        }
+
+        .weather-header p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        .weather-info {
+            padding: 15px;
+            font-size: 1rem;
+        }
+
+        #temperature {
+            font-size: 4rem;
+            font-weight: bold;
+        }
+
+        .weather-icon {
+            width: 80px;
+            height: 80px;
+        }
+
+        .weather-info p {
+            margin: 5px 0;
+        }
+
+        .stat {
+            display: block;
+            margin: 5px 0;
+            font-size: 0.9rem;
+        }
+
+        form {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        input {
+            padding: 8px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 8px 12px;
+            font-size: 1rem;
+            background-color: #e732de;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #582550;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="controls">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#ffffff" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+        </a>
+    </nav>
+    </nav>
+    <main>
+        <header>
+            <h1>Conditionals</h1>
+            <h2>Challenge</h2>
+
+        </header>
+
+        <form id="cityForm">
+            <input type="text" id="cityInput" placeholder="Ingresa una ciudad" required>
+            <button type="submit">Consultar Clima</button>
+        </form>
+
+        <div class="weather-card" id="weatherCard">
+            <div class="weather-header">
+                <h2 id="city">Ciudad</h2>
+                <p id="country">País</p>
+                <p id="date">Fecha y Hora</p>
+            </div>
+            <div class="weather-info">
+                <p id="temperature">--°C</p>
+                <img src="" alt="Icono del Clima" class="weather-icon" id="icon">
+                <p id="condition">Condición: --</p>
+                <p class="stat">Humedad: <span id="humidity">--</span>%</p>
+                <p class="stat">Nubes: <span id="cloud">--</span>%</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const apiKey = '0dbffcb632364b929df160024241511';
+        const form = document.getElementById('cityForm');
+        const cityInput = document.getElementById('cityInput');
+        const cityElement = document.getElementById('city');
+        const countryElement = document.getElementById('country');
+        const dateElement = document.getElementById('date');
+        const temperatureElement = document.getElementById('temperature');
+        const conditionElement = document.getElementById('condition');
+        const humidityElement = document.getElementById('humidity');
+        const cloudElement = document.getElementById('cloud');
+        const iconElement = document.getElementById('icon');
+        const weatherCard = document.getElementById('weatherCard');
+
+        const loadWeather = async (city) => {
+            try {
+                const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&lang=es`;
+                const response = await fetch(url);
+                const data = await response.json();
+
+                // Extraer datos y asignarlos al contenido del HTML
+                cityElement.textContent = data.location.name;
+                countryElement.textContent = data.location.country;
+                dateElement.textContent = data.location.localtime;
+                temperatureElement.textContent = `${data.current.temp_c}°C`;
+                conditionElement.textContent = `Condición: ${data.current.condition.text}`;
+                humidityElement.textContent = data.current.humidity;
+                cloudElement.textContent = data.current.cloud;
+                iconElement.setAttribute('src', `https:${data.current.condition.icon}`);
+
+                // Cambiar fondo según hora local
+                const localHour = new Date(data.location.localtime).getHours();
+                if (localHour >= 6 && localHour < 18) {
+                    weatherCard.classList.add('day-mode');
+                    weatherCard.classList.remove('night-mode');
+                } else {
+                    weatherCard.classList.add('night-mode');
+                    weatherCard.classList.remove('day-mode');
+                }
+            } catch (error) {
+                alert('No se pudo obtener el clima. Verifica la ciudad ingresada.');
+                console.error('Error cargando los datos del clima:', error);
+            }
+        };
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const city = cityInput.value.trim();
+            if (city) {
+                loadWeather(city);
+            }
+        });
+
+        // Cargar clima inicial
+        loadWeather('Seúl');
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03-get-elements</title>
+    <link rel="stylesheet" href="css/master.css">
+</head>
+<body>
+    <nav class="controls">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#fafafa" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+        </a>
+    </nav>
+    <main>
+        <header>
+            <h1>GET ELEMENTS</h1>
+            <h2>seleccionar y modificar elements en el DOM</h2>
+        </header>
+        <section>
+           <h3>Current Year: <small id="year"></small></h3>
+           <ul>
+            <li>pera</li>
+            <li>banano</li>
+            <li>mango</li>
+           </ul>
+           <h3 id="numLis"></h3>
+           <h3 id="lastLi"></h3>
+           <p class="text">lorem ipsum dolor</p>
+           <p class="text">lorem ipsum dolor</p>
+           <h3 id="numP"></h3>
+           <!--------->
+           <button class="btn  first">button 1</button>
+           <button class="btn">button 2</button>
+           <button class="btn">button 3</button>
+       </section>
+    </main>
+    <script>
+        //
+        const year = document.getElementById('year');
+        var ndate = new Date
+        year.textContent = ndate.getFullYear()
+        // get elements by id tag name
+        const lis = document.getElementsByTagName('li')
+        numLis.innerHTML = 'Number fruit:' + lis.length
+        lastLi.innerHTML = 'last fruit:?'
+        lastLi.innerHTML = 'last fruit:' + lis[lis.length-1].textContent
+        // GET ELEMENTS BY CLASS NAME
+        const ps = document.getElementsByClassName('text')
+        numP.innerHTML = 'there are: <small>' + ps.length + 'paragraphs </small>'
+        ps[0].style.backgroundColor = '#f006'
+        ps[1].style.backgroundColor = '#f003'
+        //query selector
+        const first = document.querySelector('.first')
+        const btns = document.querySelectorAll('button.btn')
+        first.style.color = '#a00'
+        btns[2].style.color = '#a00'
+        btns[2].style.marginTop = '1rem'
+      
+
+    </script>
+</body>
+</html>

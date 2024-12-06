@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04-variables</title>
+    <link rel="stylesheet" href="css/master.css">
+</head>
+
+<body>
+    <nav class="controls">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path fill="#fafafa"
+                    d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+            </svg>
+        </a>
+    </nav>
+    <main>
+        <header>
+            <h1>variables</h1>
+            <h2></h2>
+        </header>
+                <section>
+                    <h3>Type String: <small id="typeString"></small></h3>
+                    <h3>Type Number: <small id="typeNumber"></small></h3>
+                    <h3>Type Boolean: <small id="typeBoolean"></small></h3>
+                    <h3>Type Null: <small id="typeNull"></small></h3>
+                    <h3>Type Undefined: <small id="typeUndefined"></small></h3>
+                    <h3>Type Array: <small id="typeArray"></small></h3>
+                    <h3>Type Object: <small id="typeObject"></small></h3>
+                <section>
+    </main>
+    <script>
+        const typeString = document.getElementById('typeString')
+        const typeNumber = document.getElementById('typeNumber')
+        const typeBoolean = document.getElementById('typeBoolean')
+        const typeNull = document.getElementById('typeNull')
+        const typeUndefined = document.getElementById('typeUndefined')
+        const typeArray = document.getElementById('typeArray')
+        const typeObject = document.getElementById('typeObject')
+        //TYPE SRING 
+        let String1 = 'Hello'
+        let String2 = 'ADSO'
+        // Type.string.textContent = string1 + '' + string2
+        typeString.textContent = `${String1} ${String2}`
+        //type number 
+        let number1 = 34.56
+        let number2 = '32'
+        typeNumber.textContent = number1 + parseInt(number2)
+        // type booleano
+        typeBoolean.textContent = (120 >= 256)
+        //Type null
+        let valueNull = null
+        typeNull.textContent = '' + valueNull
+        // type undefined
+        let valueUndefined = undefined
+        typeUndefined.textContent = '' + valueUndefined
+        //tye arroy
+        let emojis = ['😄', '😇', '😡', '😈', '🤢']
+        typeArray.textContent = emojis
+        // TYPE OBJECT
+        let felino = {
+            name: 'coco',
+            Element: 'fire',
+            age: 23
+        }
+        typeObject.textContent = felino.name
+
+    </script>
+</body>
+
+</html>

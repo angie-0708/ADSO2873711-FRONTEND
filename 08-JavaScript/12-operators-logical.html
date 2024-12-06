@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge</title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        div.calculator{
+            background: url(images/calc/fondo-dark.png) no-repeat;
+            height: 610px;
+            margin: 1rem auto;
+            width: 360px;
+        }
+
+        header.display{
+            position: relative;
+            height: 170px;
+            img.mode{
+                object-fit: contain;
+                border-radius: 0;
+                background-color: transparent;
+                border: none;
+                height: 26px;
+               position: absolute;
+               transition: transform 0.4s ease-in;
+               top: 8px;
+               width: 100px;
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.1);
+
+                }
+                input.operation {
+                    background-color: transparent;
+                    border: none;
+                    position: absolute;
+                    font-size: 18px;
+                    font-family: 'Times New Roman', Times, serif;
+                    font-weight: 500;
+                    top: 94px;
+                    text-align: right;
+                    right: 14px;
+                    width: 326px;
+
+                }
+                h4.result{
+                    color: aliceblue;
+                    position: absolute;
+                    font-size: 48;
+                    font-weight: 600;
+                    margin: 0;
+                    top: 114px;
+                    text-align: right;
+                    right: 14px;
+                }
+                footer.buttons {
+                display: grid;
+                grid-template-columns: repeat(4, 80px);
+                justify-content: center;
+                margin-top: 0.8rem;
+                gap: 0.2rem;
+                button {
+                    border: none;
+                    cursor: pointer;
+                    height: 80px;
+                    transform: scale(0.98);
+                    transform: transform 0.2s ease-in;
+                    width: 80px;
+                    &:hover {
+                        cursor: pointer;
+                        transform: scale(1.05);
+                    } 
+                    &.btn-clear {
+                        background: url(images/calc/);
+                    }
+                    &.btn-back {
+                        background: url(images/calc/btn-del.svg);
+                    }
+                    &.btn-pow {
+                        background: url(images/calc/btn-del.svg);
+                    }
+                    &.btn-mod {
+                        background: url(images/calc/btn-del.svg);
+                    }
+                    /* <!-- segunda fila --> */
+                    &.btn-1 {
+                        background: url(images/calc/btn-del.svg);
+                    }
+                    &.btn-2 {
+                        background: url(images/calc/btn-del.svg);
+                    }
+                    &.btn-3 {
+                        background: url(images/calc/btn-del.svg);
+                    }
+                    &.btn-prod {
+                        background: url(images/calc/btn-del.svg);
+                    }
+                    /* <!-- tercera fila --> */
+                    &.btn-4 {
+                        background: url(images/calc/btn-del.svg);
+                    }
+                    &.btn-5 {
+                        background: url(images/calc/btn-del.svg);
+                    }
+                    &.btn-6 {
+                        background: url(images/calc/btn-del.svg);
+                    }
+                    &.btn-subs {
+                        background: url(images/calc/btn-del.svg);
+                    }
+                    /* <!-- cuarta fila --> */
+                    &.btn-7 {
+                        background: url(images/calc/btn-del.svg);
+                    }
+                    &.btn-8 {
+                        background: url(images/calc/btn-del.svg);
+                    }
+                    &.btn-9 {
+                        background: url(images/calc/btn-del.svg);
+                    }
+                    &.btn-add {
+                        background: url(images/calc/btn-del.svg);
+                    }
+                    /* <!-- quinta fila --> */
+                    &.btn-div {
+                        background: url(images/calc/btn-del.svg);
+                    }
+                    &.btn-0 {
+                        background: url(images/calc/btn-del.svg);
+                    }
+                    &.btn-dot {
+                        background: url(images/calc/btn-del.svg);
+                    }
+                    &.btn-equal {
+                        background: url(images/calc/btn-del.svg);
+                    }
+
+
+                }
+            }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="controls">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path fill="#fafafa"
+                    d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+            </svg>
+        </a>
+    </nav>
+    <main>
+        <header>
+            <h1>Challenge</h1>
+            <h2>Calculator</h2>
+
+        </header>
+        <section>
+            <div class="calculator">
+                <header class="display">
+                    <h5 class="operation">38x4/2</h5>
+                    <input type="text" class="operation" value="38x4/2" readonly>
+                    <h4 class="result">12.936</h4>
+                </header>
+                <footer class="buttons">
+                    <button class="btn-clear"></button>
+                    <button class="btn-back"></button>
+                    <button class="btn-pow" data-opr="**"></button>
+                    <button class="btn-mod" data-opr="%"></button>
+                    <!------------------------------------------------>
+                    <button class="btn-4" data-num="4"></button>
+                    <button class="btn-5" data-num="5"></button>
+                    <button class="btn-6" data-num="6"></button>
+                    <button class="btn-subs" data-opr="_"></button>
+
+                     <!------------------------------------------------>
+                    <button class="btn-7" data-num="7"></button>
+                    <button class="btn-8" data-num="8"></button>
+                    <button class="btn-9" data-num="9"></button>
+                    <button class="btn-add" data-opr="*"></button>
+
+                    <!------------------------------------------------>
+                    <button class="btn-div" data-opr="/"></button>
+                    <button class="btn-0" data-num="0"></button>
+                    <button class="btn-dot" data-opr="."></button>
+                    <button class="btn-equal" data-opr="="></button>
+
+                </footer>
+            </div>
+
+        </section>
+    </main>
+    <script>
+
+    </script>
+</body>
+
+</html>
