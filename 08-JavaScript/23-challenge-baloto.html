@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SustoLoto</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            margin: 0;
+        }
+        .contenedor-principal {
+            width: 420px;
+            height: 720px;
+            background-image: url('images/baloto/fondo.png');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            padding-top: 20px;
+        }
+        .titulo {
+            font-family: Inknut Antiqua;
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            margin-top: 10px;
+        }
+        .contenedor-bolas {
+            
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 35%;
+            padding: 0 20px;
+        }
+        .bola {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border: 2px solid white;
+            background: rgba(255, 255, 255, 0.3);
+            position: relative;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+        .bola img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        .bola span {
+            position: absolute;
+            z-index: 1;
+            color: white;
+            font-size: 26px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px black;
+        }
+
+        .bola-central span {
+            color:red;
+        }
+        .boton {
+            margin-left: 50%;
+            margin-top: 40%;
+            bottom: 20px;
+            transform: translateX(-50%);
+            cursor: pointer;
+        }
+        .boton img {
+            width: 200px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor-principal">
+        <h1 class="titulo">SustoLoto</h1>
+        <div class="contenedor-bolas" id="bolas"></div>
+        <div class="boton" onclick="sortearBolas()">
+            <img src="images/baloto/boton.png" alt="Start">
+        </div>
+    </div>
+
+    <script>
+        const imagenesPersonajes = [
+            'images/baloto/bola1.png', 'images/baloto/bola2.png', 'images/baloto/bola3.png', 
+            'images/baloto/bola4.png', 'images/baloto/bola6.png', 'images/baloto/bola5.png'
+        ];
+        
+        function obtenerNumeroAleatorio(max) {
+            return Math.floor(Math.random() * max) + 1;
+        }
+        
+        function sortearBolas() {
+            let contenedorBolas = document.getElementById("bolas");
+            contenedorBolas.innerHTML = "";
+            let numeros = new Set();
+            while (numeros.size < 5) {
+                numeros.add(obtenerNumeroAleatorio(50));
+            }
+            let numeroCentral = obtenerNumeroAleatorio(16);
+            
+            let index = 0;
+            numeros.forEach(num => {
+                let bola = document.createElement("div");
+                bola.classList.add("bola");
+                let img = document.createElement("img");
+                img.src = imagenesPersonajes[index];
+                let numeroTexto = document.createElement("span");
+                numeroTexto.textContent = num;
+                bola.appendChild(img);
+                bola.appendChild(numeroTexto);
+                contenedorBolas.appendChild(bola);
+                index++;
+            });
+            
+            let bolaCentral = document.createElement("div");
+            bolaCentral.classList.add("bola", "bola-central");
+            let imgCentral = document.createElement("img");
+            imgCentral.src = imagenesPersonajes[5];
+            let numeroCentralTexto = document.createElement("span");
+            numeroCentralTexto.textContent = numeroCentral;
+            bolaCentral.appendChild(imgCentral);
+            bolaCentral.appendChild(numeroCentralTexto);
+            contenedorBolas.appendChild(bolaCentral);
+        }
+    </script>
+</body>
+</html>
