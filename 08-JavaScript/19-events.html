@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        .section-dbl {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 0.6rem;
+            button {
+                background-color: #b7a63c;
+                border-radius: 5px;
+                border: none;
+                color: #fff;
+                cursor: pointer;
+                padding: 0.6rem;
+                width: 160px;
+            }
+        }
+        .section-keyup {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 0.6rem;
+            input {
+                border: 2px solid #b7a63c;
+                border-radius: 5px;
+                padding: 0.6rem;
+                width: 140px;
+            }
+        }
+        .section-change {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 0.6rem;
+            select {
+                border: 2px solid #b7a63c;
+                border-radius: 5px;
+                padding: 0.6rem;
+                width: 175px;
+            }
+            p {
+                zoom: 3;
+                margin: 0;
+            }
+        }
+        .event-mouse {
+            border-radius: 50%;
+            border: 4px solid #b7a63c;
+            margin: 0.6rem auto;
+            display: flex;
+            object-fit: cover;
+            height: 220px;
+            width: 220px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="controls">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#ffffff" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+        </a>
+    </nav>
+    <main>
+        <header>
+            <h1>Events</h1>
+            <h2>Description.</h2>
+        </header>
+        <section>
+            <h3>Event: onload</h3>
+            <h4 class="event-load"></h4>
+            <h3>Event: dblclick</h3>
+            <div class="section-dbl">
+                <button>Button</button>
+                <h4 class="event-dbl">0 Double clicks.</h4>
+            </div>
+            <h3>Event: onkeyup</h3>
+            <div class="section-keyup">
+                <input type="text" placeholder="Enter text...">
+                <h4 class="event-keyup">Null</h4>
+            </div>
+            <h3>Event: onresize</h3>
+            <h4 class="event-resize">No resize</h4>
+            <h3>Event: onchange</h3>
+            <div class="section-change">
+                <select>
+                    <option value="🤔" selected>Selecciona un animal.</option>
+                    <option value="🐮">Cow.</option>
+                    <option value="🐷">Pig.</option>
+                    <option value="🐶">Dog.</option>
+                    <option value="🦊">Fox.</option>
+                    <option value="🐻">Bear.</option>
+                </select>
+                <p class="event-change">🤔</p>
+            </div>
+            <h3>Event: onmouseover</h3>
+            <img src="images/events/babosa.jpeg" class="event-mouse">
+        </section>
+    </main>
+    <script>
+        // Messages
+        const msgLoad   = document.querySelector('.event-load')
+        const msgDbl    = document.querySelector('.event-dbl')
+        const msgKeyUp  = document.querySelector('.event-keyup')
+        const msgReSize = document.querySelector('.event-resize')
+        const msgChange = document.querySelector('.event-change')
+
+        //Event: onload
+        const eBody = document.querySelector('body')
+        eBody.onload = function () {
+            msgLoad.textContent = 'The page is loaded!'
+       }
+
+        // Event: ondbl
+        const btnDbl = document.querySelector('.section-dbl button')
+        let countDblClicks = 0
+        btnDbl.addEventListener('dblclick', function()  {
+            msgDbl.textContent = ++countDblClicks + ' Double clicks.'
+        })
+
+        // Event: onkeyup
+        const inpKeyUp = document.querySelector('.section-keyup input')
+        inpKeyUp.onkeyup = function () {
+            if (this.value.length <= 18) {
+                msgKeyUp.textContent = this.value
+            }
+        }
+
+        //Event: onresize
+        window.onresize = function() {
+            msgReSize.textContent = 'Window width: ' + window.outerWidth + 'px.'
+        }
+
+        //Event. onchange
+        const sltChange = document.querySelector('.section-change select')
+        sltChange.addEventListener('change', function () {
+            msgChange.textContent = this.value       
+        })
+
+        //Event:onmouseover
+        const imgMouse = document.querySelector('.event-mouse')
+        imgMouse.addEventListener('mouseover', function () {
+            this.src = 'images/events/transform.webp'
+        })
+        imgMouse.addEventListener('mouseout', function () {
+            this.src = 'images/events/babosa.jpeg'
+        })
+    </script>
+</body>
+</html>

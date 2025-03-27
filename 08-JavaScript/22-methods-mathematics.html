@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods mathematics</title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        button {
+            border: none;
+            background-color: transparent;
+            appearance: none;
+            cursor: pointer;
+            margin: 1rem auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 120px;
+            line-height: 0 !important;
+            width: 120px;
+            font-size: 8rem;
+            transition: transform 0.2s ease-in;
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="controls">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#ffffff" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+        </a>
+    </nav>
+    <main>
+        <header>
+            <h1>Methods mathematics</h1>
+            <h2>
+                Use math methods for advanced a calculators
+            </h2>
+        </header>
+        <section>
+            <h2>Random (roll DICE)</h2>
+            <button class="btn-dice">⚀</button>
+            
+            <h3>Random [Counter Up]</h3>
+            <button class="btn-counter">1</button>
+
+            <h3>Min|Max</h3>
+            <p class="out-min"></p>
+            <p class="out-max"></p>
+        </section>
+    </main>
+    <script>
+        // Elements
+        const btnDice    = document.querySelector('.btn-dice');
+        const arrDice    = ['⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
+        const btnCounter = document.querySelector('.btn-counter');
+        const outMin     = document.querySelector('.out-min');
+        const outMax     = document.querySelector('.out-max');
+
+        // Events
+        btnDice.addEventListener('click', function (){
+            // round, ceil, floor
+            let rand = Math.floor(Math.random() * arrDice.length)
+            this.textContent = arrDice[rand]
+        })
+        btnCounter.addEventListener('click', function (){
+            let rand = Math.ceil(Math.random() * 99)
+            let cont = 1
+            let elm = this
+            const interval = setInterval(function (){
+                if (cont == rand) {
+                    clearInterval(interval)
+                }
+                elm.textContent = cont
+                cont++
+            }, 100)
+        })
+        // Min / Max
+        outMin.textContent = 'Min values: 4, 10, -8, 3 => ' + Math.min(4, 10, -8, 3)
+        outMax.textContent = 'Max values: 4, 10, -8, 3 => ' + Math.max(4, 10, -8, 3)
+    </script>
+</body>
+</html>

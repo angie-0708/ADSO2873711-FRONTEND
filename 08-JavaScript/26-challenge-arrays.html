@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Array</title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .fondo {
+            width: 400px;
+            height: 600px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            background-image: url('images/NEMO/fondo.png');
+            background-size: cover;
+        }
+
+        .select-personaje {
+            margin-top: 8px;
+            height: 23px;
+            width: 323px;
+        }
+
+        .personajes-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+            justify-items: center;
+            margin-top: 8px;
+        }
+
+
+        .personaje {
+            width: 68px;
+            height: 56px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .personaje:hover {
+            transform: translateY(-5px);
+        }
+
+        .personaje-index {
+            position: absolute;
+            top: 0;
+            right: 2px;
+            background-color: #0C79B9;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .select-options {
+            height: 28px;
+            width: 294px;
+            margin-top: 14px;
+        }
+
+        .selected {
+            border: 2px solid #ffffff;
+            border-radius: 20px;
+        }
+
+        .options {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .select-result {
+            height: 28px;
+            width: 132px;
+            margin-top: 6px;
+        }
+
+        .result {
+            margin-top: -3px;
+            min-height: 60px;
+        }
+
+        .toggle-button-cover {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            width: 100px;
+            height: 50px;
+            margin: -9px 0;
+        }
+
+        .button {
+            background-color: #0C79B9;
+            position: relative;
+            width: 78px;
+            height: 36px;
+            border: 2px solid #ffffff;
+            border-radius: 20px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #17465c;
+        }
+
+        .active {
+            background-color: #01818a;
+            color: white;
+        }
+
+        .select-input {
+            width: 74px;
+            height: 29px;
+            border: 2px solid #ffffff;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            background-color: #0C79B9;
+        }
+
+        .select-input:focus {
+            outline: none;
+        }
+
+        .select-input::placeholder {
+            color: white;
+        }
+
+        .mas-container {
+            margin: 6px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .mas {
+            width: 60px;
+            height: 60px;
+            transition: transform 0.3s ease;
+        }
+
+        .mas:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>Challenge Array</h1>
+            <h2>Buscando a Nemo</h2>
+        </header>
+        <section>
+            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="400" height="450"
+                src="https://embed.figma.com/design/yJCeWEmOYXGzKtOSuB66Oo/NEMO?node-id=0-1&embed-host=share"
+                allowfullscreen></iframe>
+            <div class="fondo">
+                <img src="images/NEMO/titulo.png" alt="logo">
+                <div class="select-personaje">
+                    <img src="images/NEMO/selecciona_personaje.png" alt="Select personaje">
+                </div>
+                <div class="personajes-container" id="personajes-container">
+                </div>
+                <div class="select-options">
+                    <img src="images/NEMO/selecciona_opcion.png" alt="Select Option">
+                </div>
+                <div class="options">
+                    <div class="toggle-button-cover">
+                        <button id="button-1" class="button"
+                            onclick="toggleButton('button-1', 'First', 'Last')">First</button>
+                    </div>
+                    <div class="toggle-button-cover">
+                        <input type="number" id="personaje-index" class="select-input" placeholder="#" min="0" max="19"
+                            oninput="selectpersonaje()" />
+                    </div>
+                    <div class="toggle-button-cover">
+                        <button id="button-2" class="button"
+                            onclick="toggleButton('button-2', 'Add', 'Remove')">Add</button>
+                    </div>
+                </div>
+                <div class="mas-container">
+                    <img src="images/NEMO/agregar.png" alt="mas" class="mas">
+                </div>
+                <div class="select-result">
+                    <img src="images/NEMO/resultado.png" alt="Result">
+                </div>
+                <div class="result" id="result"></div>
+            </div>
+        </section>
+    </main>
+    <script>
+        const personajes = ["personaje1.png", "personaje2.png", "personaje3.png", "personaje4.png", "personaje5.png", "personaje6.png", "personaje7.png", "personaje8.png", "personaje9.png", "personaje10.png", "personaje11.png", "personaje12.png"];
+        const seleccionados = [];
+        const maxPersonajes = 5;
+        const container = document.getElementById("personajes-container");
+        const resultContainer = document.getElementById("result");
+        let selectedpersonaje = null;
+
+        personajes.forEach((personaje, index) => {
+            const img = document.createElement("img");
+            img.src = `images/NEMO/${personaje}`;
+            img.classList.add("personaje");
+            img.dataset.index = index;
+            img.addEventListener("click", () => {
+                document.querySelectorAll(".personaje").forEach(b => b.classList.remove("selected"));
+                img.classList.add("selected");
+                selectedpersonaje = personaje;
+            });
+            container.appendChild(img);
+        });
+
+        function actualizarVista() {
+            resultContainer.innerHTML = "";
+            seleccionados.forEach((personaje, index) => {
+                const div = document.createElement("div");
+                div.style.position = "relative";
+                div.style.display = "inline-block";
+
+                const img = document.createElement("img");
+                img.src = `images/NEMO/${personaje}`;
+                img.classList.add("personaje");
+                div.appendChild(img);
+
+                const indexElement = document.createElement("div");
+                indexElement.textContent = index;
+                indexElement.classList.add("personaje-index");
+                div.appendChild(indexElement);
+
+                resultContainer.appendChild(div);
+            });
+        }
+
+        document.querySelector(".mas").addEventListener("click", () => {
+            const actionText = document.getElementById("button-2").textContent;
+            const positionText = document.getElementById("button-1").textContent;
+            const index = parseInt(document.getElementById("personaje-index").value);
+
+            if (actionText === "Add" && selectedpersonaje) {
+                if (seleccionados.length >= maxPersonajes) {
+                    return;
+                }
+
+                if (index >= 0 && index <= seleccionados.length) {
+                    seleccionados.splice(index, 0, selectedpersonaje);
+                } else {
+                    if (positionText === "First") {
+                        seleccionados.unshift(selectedpersonaje);
+                    } else {
+                        seleccionados.push(selectedpersonaje);
+                    }
+                }
+            } else if (actionText === "Remove") {
+                if (index >= 0 && index < seleccionados.length) {
+                    seleccionados.splice(index, 1);
+                } else {
+                    if (positionText === "First") {
+                        seleccionados.shift();
+                    } else {
+                        seleccionados.pop();
+                    }
+                }
+            }
+
+            actualizarVista();
+        });
+
+        function toggleButton(buttonId, defaultText, toggledText) {
+            const button = document.getElementById(buttonId);
+            button.classList.toggle("active");
+            const isActive = button.classList.contains("active");
+            button.textContent = isActive ? toggledText : defaultText;
+
+            if (buttonId === "button-2") {
+                const masImg = document.querySelector(".mas");
+                masImg.src = isActive && toggledText === "Remove" ? "images/NEMO/eliminar.png" : "images/NEMO/agregar.png";
+            }
+        }
+    </script>
+</body>
+
+</html>

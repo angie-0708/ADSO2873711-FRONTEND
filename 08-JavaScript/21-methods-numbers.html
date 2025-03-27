@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods Numbers</title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        section {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        button {
+            background-color: #f0db4f;
+            border-radius: 5px;
+            border: none;
+            color: #000;
+            cursor: pointer;
+            padding: 0.6rem;
+            width: 160px;
+        }
+
+        input {
+            border: 1px solid #b7a63c;
+            border-radius: 5px;
+            padding: 0.5rem;
+            margin-top: 1rem;
+            width: 140px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="controls">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path fill="#ffffff"
+                    d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+            </svg>
+        </a>
+    </nav>
+    <main>
+        <header>
+            <h1>Methods Numbers</h1>
+            <h2>
+                Perform operations with number methods.
+            </h2>
+        </header>
+        <section>
+            <input type="number" class="num-float" placeholder="Enter a float number">
+            <button class="btn-calc">Calculate</button>
+            <ul class="output">
+
+            </ul>
+        </section>
+    </main>
+    <script>
+        // Elements
+        const numFloat = document.querySelector('.num-float');
+        const btnCalc  = document.querySelector('.btn-calc');
+        const output   = document.querySelector('.output');
+
+        // Events
+        btnCalc.addEventListener('click', function(){
+            const num = parseFloat(numFloat.value);
+            if (isFloat(num)){
+                output.innerHTML = "<li><strong>toString: </strong>"+num.toString()+"</li>";
+                output.innerHTML += "<li><strong>toFixed: </strong>"+num.toFixed(0)+"</li>";
+                output.innerHTML += "<li><strong>toPrecision:  </strong>"+num.toPrecision(2)+"</li>";
+                output.innerHTML += "<li><strong>parseInt:  </strong>"+parseInt(num)+"</li>";
+                output.innerHTML += "<li><strong>parseFloat:  </strong>"+parseFloat(num)+"</li>";
+            } else {
+                alert('false')
+            }
+        });
+
+        function isFloat(num) {
+            return (num % 1 !== 0)
+        }
+    </script>   
+</body>
+</html>

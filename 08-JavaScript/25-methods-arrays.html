@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods Arrays</title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        section ul {
+            padding: 0;
+        }
+        section ul.emojis li {
+            display: grid;
+            grid-template-columns: 140px 260px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="controls">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#ffffff" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+        </a>
+    </nav>
+    <main>
+        <header>
+            <h1>Methods Arrays</h1>
+            <h2>Manipula arreglos usando métodos.</h2>
+        </header>
+        <section>
+            <ul class="emojis"></ul>
+        </section>
+    </main>
+    <script>
+        //Elements 
+        const emojis = document.querySelector('.emojis')
+        emojis.style.fontSize = '1.6rem'
+
+        // Methods Array
+        let arrEmojis = ['👮🏻‍♂️', '🕵🏾‍♂️', '👨🏻‍🏫', '👨🏾‍🍳']
+        emojis.innerHTML = `<li><b>Values:</b> ${arrEmojis.valueOf()} </li>`
+        emojis.innerHTML += `<li><b>String:</b> ${arrEmojis.toString()} </li>`
+        emojis.innerHTML += `<li><b>Join:</b> ${arrEmojis.join('🤖')} </li>`
+        emojis.innerHTML += `<li><b>Sort:</b> ${arrEmojis.sort()} </li>`
+        emojis.innerHTML += `<li><b>Reverse:</b> ${arrEmojis.reverse()} </li>`
+        arrEmojis.unshift('👨🏻‍🚒')
+        emojis.innerHTML += `<li><b>Unshift:</b> ${arrEmojis.valueOf()} </li>`
+        arrEmojis.push('👨🏻‍🚀')
+        emojis.innerHTML += `<li><b>Push:</b> ${arrEmojis.valueOf()} </li>`
+        arrEmojis.shift('')
+        emojis.innerHTML += `<li><b>Shift:</b> ${arrEmojis.valueOf()} </li>`
+        arrEmojis.pop('')
+        emojis.innerHTML += `<li><b>Pop:</b> ${arrEmojis.valueOf()} </li>`
+    </script>
+</body>
+</html>
