@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Juego de Memoria</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .color-box {
+      width: 70px;
+      height: 70px;
+      display: inline-block;
+      margin: 10px;
+      border: 2px solid #b7a63c;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: #b7a63c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .message {
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Juego de Memoria</h1>
+  <p>Presiona las teclas del 1 al 6 para repetir la secuencia</p>
+
+  <div id="secuencia"></div>
+  <br />
+  <button id="iniciar">Iniciar</button>
+  <div class="message" id="mensaje"></div>
+
+  <script>
+    const colores = ['red', 'blue', 'green', 'yellow', 'purple', 'orange'];
+    let secuencia = [];
+    let respuesta = [];
+
+    const divSecuencia = document.getElementById('secuencia');
+    const btnIniciar = document.getElementById('iniciar');
+    const mensaje = document.getElementById('mensaje');
+
+    btnIniciar.onclick = () => {
+      secuencia = [];
+      respuesta = [];
+      mensaje.textContent = '';
+      nuevaRonda();
+    };
+
+    function nuevaRonda() {
+      respuesta = [];
+      const color = colores[Math.floor(Math.random() * colores.length)];
+      secuencia.push(color);
+      mostrarSecuencia();
+    }
+
+    function mostrarSecuencia() {
+      divSecuencia.innerHTML = '';
+      secuencia.forEach((color, i) => {
+        setTimeout(() => {
+          const div = document.createElement('div');
+          div.className = 'color-box';
+          div.style.background = color;
+          divSecuencia.appendChild(div);
+        }, i * 700);
+      });
+
+      setTimeout(() => {
+        divSecuencia.innerHTML = '';
+        mensaje.textContent = '¡Tu turno!';
+        document.addEventListener('keydown', manejarTecla);
+      }, secuencia.length * 700);
+    }
+
+    function manejarTecla(e) {
+      const mapa = {
+        49: 'red', 50: 'blue', 51: 'green',
+        52: 'yellow', 53: 'purple', 54: 'orange'
+      };
+
+      const color = mapa[e.keyCode];
+      if (!color) return;
+
+      respuesta.push(color);
+
+      if (respuesta[respuesta.length - 1] !== secuencia[respuesta.length - 1]) {
+        mensaje.textContent = '¡Incorrecto! Era: ' + secuencia.join(', ');
+        document.removeEventListener('keydown', manejarTecla);
+      } else if (respuesta.length === secuencia.length) {
+        mensaje.textContent = '¡Correcto! Siguiente ronda...';
+        document.removeEventListener('keydown', manejarTecla);
+        setTimeout(nuevaRonda, 1000);
+      }
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge Event-time</title>
+    <link rel="stylesheet" href="css/master.css" />
+    <style>
+        html {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            flex-direction: column;
+        }
+
+        header {
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            color: #333;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        body section {
+            background: url("images/event-time/fondo.png");
+            padding: 2rem;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            align-items: center;
+            margin-top: -10%;
+            width: 90%;
+            height: 70%;
+         
+        }
+
+        button {
+            background: transparent;
+            border: none;
+            outline: none;
+            box-shadow: none;
+            padding: 0;
+            transition: transform 0.3s ease;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        button img {
+            width: 60%;
+        }
+
+        .texto p {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #dddada;
+            background-color: transparent;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        nav.controls {
+            margin-bottom: 1rem;
+        }
+
+        nav.controls a {
+            display: inline-block;
+            background: #b7a63c;
+            padding: 0.5rem;
+            border-radius: 5px;
+        }
+
+        nav.controls svg {
+            width: 40px;
+            height: 40px;
+        }
+
+        .contenedor-juego {
+            text-align: center;
+            position: relative;
+        }
+
+        nav.controls {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 10;
+        }
+
+        .guia-img {
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+            margin-left: 0;
+            margin-top: 2rem;
+        }
+
+        .columna {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .img-guia {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80px;
+            font-size: 16px;
+            text-align: center;
+            overflow: auto;
+            justify-content: center;
+        }
+
+        .image-1 img,
+        .image-2 img,
+        .image-3 img,
+        .image-4 img,
+        .image-5 img,
+        .image-6 img,
+        .image-7 img,
+        .image-8 img {
+            width: 60px;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgb(255, 255, 255);
+        }
+
+        .number {
+            font-size: 12px;
+            color: #fff5f5;
+            margin-top: 5px;
+            text-align: center;
+            font-weight: normal;
+        }
+
+        .logo img {
+            width: 25%;
+            margin-bottom: 10px;
+        }
+
+        .message {
+            margin-top: 2rem;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+            font-size: 1.4rem;
+            color: rgb(197, 209, 194);
+            
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+
+        .texto {
+            display: block;
+        }
+
+        .guia-img {
+            visibility: hidden;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <nav class="controls">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path fill="#ffffff"
+                    d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+            </svg>
+        </a>
+    </nav>
+
+    <header>
+        <h1>Challenge Event-time</h1>
+    </header>
+
+    <main>
+        <section>
+            <div class="guia-img">
+                <div class="columna">
+                    <div class="img-guia">
+                        <div class="image-1"><img src="images/event-time/image1.png"></div>
+                        <div class="number">1</div>
+                    </div>
+                    <div class="img-guia">
+                        <div class="image-2"><img src="images/event-time/image2.png"></div>
+                        <div class="number">2</div>
+                    </div>
+                    <div class="img-guia">
+                        <div class="image-3"><img src="images/event-time/image3.png"></div>
+                        <div class="number">3</div>
+                    </div>
+                    <div class="img-guia">
+                        <div class="image-4"><img src="images/event-time/image4.png"></div>
+                        <div class="number">4</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contenedor-juego">
+                <div class="logo">
+                    <img src="images/logoMarciano.png" alt="">
+                </div>
+                <div class="texto">
+                    <p>¡Presion la tecla del 1 al 8 para seguir la secuencia!</p>
+                </div>
+                <button id="iniciar">
+                    <img src="images/boton.png" alt="">
+                </button>
+                <div class="message" id="mensaje"></div>
+            </div>
+
+            <div class="guia-img">
+                <div class="columna">
+                    <div class="img-guia">
+                        <div class="image-5"><img src="images/event-time/image5.png"></div>
+                        <div class="number">5</div>
+                    </div>
+                    <div class="img-guia">
+                        <div class="image-6"><img src="images/event-time/image6.png"></div>
+                        <div class="number">6</div>
+                    </div>
+                    <div class="img-guia">
+                        <div class="image-7"><img src="images/event-time/image7.png"></div>
+                        <div class="number">7</div>
+                    </div>
+                    <div class="img-guia">
+                        <div class="image-8"><img src="images/event-time/image8.png"></div>
+                        <div class="number">8</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        const secuencia = [];
+        let respuesta = [];
+        const rondasParaGanar = 10;
+
+        const btnIniciar = document.getElementById('iniciar');
+        const mensaje = document.getElementById('mensaje');
+        const imagenes = document.querySelectorAll('.img-guia img');
+        const texto = document.querySelector('.texto');
+        const guiaImgs = document.querySelectorAll('.guia-img');
+
+        btnIniciar.onclick = () => {
+            secuencia.length = 0;
+            respuesta = [];
+            mensaje.textContent = '';
+            texto.style.display = 'none';  
+            guiaImgs.forEach(guia => guia.style.visibility = 'visible');  
+            btnIniciar.style.display = 'none';
+            nuevaRonda();
+        };
+
+        function nuevaRonda() {
+            respuesta = [];
+            const nuevoIndex = Math.floor(Math.random() * imagenes.length);
+            secuencia.push(nuevoIndex);
+            mostrarSecuencia();
+        }
+
+        function mostrarSecuencia() {
+            document.removeEventListener('keydown', manejarTecla);
+
+            imagenes.forEach(img => {
+                img.style.border = 'none';
+                img.style.filter = 'grayscale(100%)';
+            });
+
+            secuencia.forEach((index, i) => {
+                setTimeout(() => {
+                    iluminarImagen(index);
+                }, i * 700);
+            });
+
+            setTimeout(() => {
+                document.addEventListener('keydown', manejarTecla);
+            }, secuencia.length * 700 + 100);
+        }
+
+        function iluminarImagen(index) {
+            const img = imagenes[index];
+            img.style.filter = 'grayscale(0%)';
+            img.style.border = '2px solid #fff';
+            setTimeout(() => {
+                img.style.filter = 'grayscale(100%)';
+                img.style.border = 'none';
+            }, 400);
+        }
+
+        function manejarTecla(e) {
+    const tecla = e.key;
+    if (tecla < '1' || tecla > '8') return;
+
+    const index = parseInt(tecla) - 1;
+    respuesta.push(index);
+    iluminarImagen(index);
+
+    if (respuesta[respuesta.length - 1] !== secuencia[respuesta.length - 1]) {
+        document.removeEventListener('keydown', manejarTecla);
+        mensaje.textContent = '¡Incorrecto! La secuencia era: ' + secuencia.map(i => i + 1).join(', ');
+
+        setTimeout(() => {
+            secuencia.length = 0;
+            respuesta = [];
+            mensaje.textContent = '';
+            texto.style.display = 'block';  
+            guiaImgs.forEach(guia => guia.style.visibility = 'hidden');  
+            btnIniciar.style.display = 'inline';
+            btnIniciar.querySelector('img').alt = 'Iniciar juego';
+        }, 2000); 
+        return;
+    }
+
+    if (respuesta.length === secuencia.length) {
+        document.removeEventListener('keydown', manejarTecla);
+
+        if (secuencia.length === rondasParaGanar) {
+            mensaje.textContent = '🏆 ¡Ganaste! Completaste todas las rondas.';
+            btnIniciar.style.display = 'inline';
+            btnIniciar.querySelector('img').alt = 'Reiniciar juego';
+        } else {
+            mensaje.textContent = '¡Correcto! Siguiente ronda...';
+            setTimeout(nuevaRonda, 1000);
+        }
+    }
+}
+          
+
+    </script>
+</body>
+
+</html>
